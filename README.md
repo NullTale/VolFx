@@ -2,8 +2,8 @@
 [![Twitter](https://img.shields.io/badge/Follow-Twitter?logo=twitter&color=white)](https://twitter.com/NullTale)
 [![Boosty](https://img.shields.io/badge/Support-Boosty?logo=boosty&color=white)](https://boosty.to/nulltale)
 
-VFX Toolkit is a targeting post-processing vis buffer system<br>
-that allows to build a custom scene architecture for visual effects creation ✨
+VFX Toolkit is customizable multy post-processing vis buffer system<br>
+that allows to build a scene processing architecture for visual effects creation ✨
 
 ## Features
 * Custom passes - expandable, has minimal set of custom effects and generic blit feature
