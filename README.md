@@ -3,14 +3,15 @@
 VFX Toolkit is targeting post-processing vis buffer system<br>
 that allows to build a custom scene architecture for visual effects creation ✨
 
-#### Features
+### Features
 * Targeting post processing - can be applyed to scene objects by layers mask
 * Custom passes - expandable, has minimal set of custom effects and generic blit feature
 * Buffer system - can render object to buffer to make additional textures(like light maps, pattern animations, height etc) to process them and use later throug the shader for visual effect creation
 * Volume controll - all build in effects controlled via volume profile and linked to a layer mask, so scene processing can be easily made dynamic
-* Part of Artwork project - all effect from "PostArt" projects can be added as passes to this frameword without cluttering
-* Configurable pipline - each effect can be reordered and configurade depending on application
+* Part of Artwork project - all effects from "PostArt" projects can be added as passes to this frameword without cluttering
+* Configurable pipeline - each effect can be reordered and configurade depending on the application
  
+-----
 ![_Cover](https://github.com/NullTale/VolFx/assets/1497430/a1f99548-8bc8-43fb-93ba-0668f9a46ef9)<br>
 <sup>Visual novel example, post processing applyed to scene objects by LayerMask to blur the background and fade character sprite<br>
 thus you can make the appearance effect or apply graphical changes separately to scene objects</sup>
@@ -28,6 +29,31 @@ Add `VolFx` feature to the UrpRenderer, add post process passes to it, control v
 ```
 https://github.com/NullTale/VolFx.git
 ```
+![_Urp](https://github.com/NullTale/VolFx/assets/1497430/21dda2ff-c82e-4d46-8335-d542fc53428c)
 
 `VolBuffers` feature can be used to collect specific object to a texture to provide some vfx texture source<br>
 that can be post processed at runtime and used later trhoug a shader
+
+![image](https://github.com/NullTale/VolFx/assets/1497430/9288c212-c6c2-486b-b699-940eacc11a53)
+
+## Build in Effects
+
+Extended Color Adjustments, with the curve you can adjust the range on which part of the image to apply Color Adjustement <br>
+Other option are classic exept the alpha channel that used to adjust alpha chennel to blend images properly <br>
+
+![Adjustments](https://github.com/NullTale/VolFx/assets/1497430/af84b49d-22c3-47fd-a315-d4e8f7b35ac9)
+
+Extended Bloom effect, threshold controlled by curve, color made with gradient(support blending) <br>
+Also has some advanved options in effect passm like flickering, samples count and scuttering curve. <br>
+Basically extended remplementation of moust popular effect to process the images <br>
+
+![Bloom](https://github.com/NullTale/VolFx/assets/1497430/12475cb3-ab40-4e89-a3ac-6730155ed075)
+
+Just simple blur with radial and distortion options
+
+![Blur](https://github.com/NullTale/VolFx/assets/1497430/28b6a7ab-1eae-4053-8088-99a20cc9a6b3)
+
+Colorization effect taken from pupular grathic editors [GradientMap](https://www.bcit.cc/cms/lib04/NJ03000372/Centricity/Domain/299/p6_howto_use_gradient_maps%2018.pdf) <br>
+Wery powerfull toll to colorize and adjust images, support masking and gradient blending at runtime <br>
+
+![Gradient Map](https://github.com/NullTale/VolFx/assets/1497430/819c808c-9b79-4f6c-b618-fffda4c8cea2)
