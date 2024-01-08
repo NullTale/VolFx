@@ -74,13 +74,6 @@ Wery powerfull toll to colorize and adjust images, support masking and gradient 
 
 ![Gradient Map](https://github.com/NullTale/VolFx/assets/1497430/819c808c-9b79-4f6c-b618-fffda4c8cea2)
 
------------------------------------------ - - - - -  -  - <br>
-
-More effects can be [downloaded](https://github.com/NullTale/PixelationFx) separately <br>
-If `VolFx` is installed they will work as part of the framework and will not appear in the RenderFeature list
-
-![_cover](https://github.com/NullTale/PixelationFx/assets/1497430/bae56685-73f5-4f0a-b87b-581ec462debd)
-
 ## Custom Effect
 
 There is an example of simple grayscale effect that can be found in `Project Samples`
@@ -142,3 +135,14 @@ public virtual void Invoke(CommandBuffer cmd, RTHandle source, RTHandle dest,
     Utils.Blit(cmd, source, dest, _material, 0, Invert);
 }
 ```
+
+### PostArt
+
+More effects can be [downloaded](https://github.com/NullTale/PixelationFx) separately for use in combination<br>
+If `VolFx` is installed they will work as part of the framework and will not appear in the RenderFeature list
+
+![_cover](https://github.com/NullTale/PixelationFx/assets/1497430/bae56685-73f5-4f0a-b87b-581ec462debd)
+
+![_cover](https://github.com/NullTale/FlowFx/assets/1497430/99ddc6d9-e727-4f3f-8b36-9f3d8ec5aebd)
+
+![_cover](https://github.com/NullTale/OutlineFilter/assets/1497430/ca30a418-585d-40f0-8ccf-cb847d8e5f46)
