@@ -11,7 +11,7 @@ that allows to build a custom scene architecture for visual effects creation ✨
 * Volume controll - all build in effects controlled via volume profile and linked to a layer mask, so scene processing can be easily made dynamic
 * Buffer system - can render object to buffer to make additional textures(like light maps, pattern animations, height etc) to process them and use later throug the shader for visual effect creation
 * Configurable pipeline - each effect can be reordered and configurade depending on the application
-* Part of Artwork project - all effects from [PostArt](https://github.com/NullTale/PixelationFx) projects can be added as passes to VolFx without cluttering Volume or render feature list
+* Part of Artwork project - all effects from [PostArt](https://github.com/NullTale/PixelationFx) projects can be added as passes to VolFx without cluttering Volume or RenderFeature's list
 
 ----------------------------------------- - - - - -  -  - <br>
 
