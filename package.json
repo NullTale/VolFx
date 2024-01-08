@@ -1,0 +1,32 @@
+{
+  "name": "www.nulltale.volfx",
+  "displayName": "VolFx",
+  "version": "1.0.0",
+  "unity": "2022.1",
+  "description": "VFX Toolkit - screen, layer and texture post-processing, buffer system effects applicable via timeline",
+  "documentationUrl": "https://github.com/NullTale/VolFx",
+  "licensesUrl": "https://github.com/NullTale/VolFx/blob/master/LICENSE.md",
+  "author": {
+    "name": "NullTale",
+    "email": "nulltale@gmail.com",
+    "url": "https://github.com/NullTale"
+  },
+  "dependencies": {
+    "com.unity.cinemachine": "2.8.9",
+    "com.unity.render-pipelines.universal": "14.0.6",
+    "com.unity.timeline": "1.6.5"
+  },
+  "hideInEditor": false,
+  "samples": [
+      {
+          "displayName": "Post Process",
+          "description": "Custom post processing pass, layer mask visual novel example",
+          "path": "Samples~/VolFx"
+      },
+      {
+          "displayName": "Buffer system",
+          "description": "Example of buffer system usage",
+          "path": "Samples~/Buffers"
+      }
+    ]
+}

@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3025470156994563098
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318746fcd28a4c69b04bd76bb679e99e, type: 3}
+  m_Name: BloomVol
+  m_EditorClassIdentifier: 
+  active: 1
+  m_Intencity:
+    m_OverrideState: 1
+    m_Value: 2.37
+  m_Scatter:
+    m_OverrideState: 0
+    m_Value: 0
+  m_Threshold:
+    m_OverrideState: 1
+    m_Value:
+      _curve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0.4229663
+          value: 0
+          inSlope: 0.36657616
+          outSlope: 0.36657616
+          tangentMode: 0
+          weightedMode: 3
+          inWeight: 0
+          outWeight: 0.76063025
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0.040759236
+          outSlope: 0.040759236
+          tangentMode: 0
+          weightedMode: 3
+          inWeight: 0.38005206
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      _pixels:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0.011768701, g: 0.011768701, b: 0.011768701, a: 0.011768701}
+      - {r: 0.028316583, g: 0.028316583, b: 0.028316583, a: 0.028316583}
+      - {r: 0.04884789, g: 0.04884789, b: 0.04884789, a: 0.04884789}
+      - {r: 0.073996685, g: 0.073996685, b: 0.073996685, a: 0.073996685}
+      - {r: 0.104566015, g: 0.104566015, b: 0.104566015, a: 0.104566015}
+      - {r: 0.14158915, g: 0.14158915, b: 0.14158915, a: 0.14158915}
+      - {r: 0.18641683, g: 0.18641683, b: 0.18641683, a: 0.18641683}
+      - {r: 0.24083595, g: 0.24083595, b: 0.24083595, a: 0.24083595}
+      - {r: 0.3071994, g: 0.3071994, b: 0.3071994, a: 0.3071994}
+      - {r: 0.3884571, g: 0.3884571, b: 0.3884571, a: 0.3884571}
+      - {r: 0.48755977, g: 0.48755977, b: 0.48755977, a: 0.48755977}
+      - {r: 0.6045598, g: 0.6045598, b: 0.6045598, a: 0.6045598}
+      - {r: 0.72940123, g: 0.72940123, b: 0.72940123, a: 0.72940123}
+      - {r: 0.83965325, g: 0.83965325, b: 0.83965325, a: 0.83965325}
+      - {r: 0.91876984, g: 0.91876984, b: 0.91876984, a: 0.91876984}
+      - {r: 0.9671178, g: 0.9671178, b: 0.9671178, a: 0.9671178}
+      - {r: 0.99197716, g: 0.99197716, b: 0.99197716, a: 0.99197716}
+      - {r: 1, g: 1, b: 1, a: 1}
+  m_Color:
+    m_OverrideState: 1
+    m_Value:
+      _grad:
+        serializedVersion: 2
+        key0: {r: 1, g: 0.21062641, b: 0, a: 1}
+        key1: {r: 1, g: 0.827451, b: 0, a: 0.75686276}
+        key2: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 0}
+        key4: {r: 0, g: 0, b: 0, a: 0}
+        key5: {r: 0, g: 0, b: 0, a: 0}
+        key6: {r: 0, g: 0, b: 0, a: 0}
+        key7: {r: 0, g: 0, b: 0, a: 0}
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_Mode: 2
+        m_ColorSpace: -1
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      _pixels:
+      - {r: 1, g: 0.21176472, b: 0, a: 1}
+      - {r: 1.0025349, g: 0.24313727, b: 0, a: 0.99215686}
+      - {r: 1.0049248, g: 0.27450982, b: 0, a: 0.9843137}
+      - {r: 1.0071659, g: 0.3019608, b: 0, a: 0.9764706}
+      - {r: 1.0092583, g: 0.3254902, b: 0, a: 0.96862745}
+      - {r: 1.011199, g: 0.3529412, b: 0, a: 0.9607843}
+      - {r: 1.0129862, g: 0.37647063, b: 0, a: 0.9529412}
+      - {r: 1.014617, g: 0.39607847, b: 0, a: 0.94509804}
+      - {r: 1.0160904, g: 0.41960788, b: 0, a: 0.9372549}
+      - {r: 1.0174036, g: 0.43921572, b: 0, a: 0.92941177}
+      - {r: 1.0185547, g: 0.45882356, b: 0, a: 0.92156863}
+      - {r: 1.0195408, g: 0.4784314, b: 0, a: 0.9137255}
+      - {r: 1.020359, g: 0.49803925, b: 0, a: 0.90588236}
+      - {r: 1.0210075, g: 0.5176471, b: 0, a: 0.8980392}
+      - {r: 1.0214834, g: 0.5372549, b: 0, a: 0.8901961}
+      - {r: 1.0217848, g: 0.5529412, b: 0, a: 0.88235295}
+      - {r: 1.0219069, g: 0.57254905, b: 0, a: 0.8745098}
+      - {r: 1.0218477, g: 0.5921569, b: 0, a: 0.8666667}
+      - {r: 1.0216045, g: 0.60784316, b: 0, a: 0.85882354}
+      - {r: 1.0211735, g: 0.627451, b: 0, a: 0.8509804}
+      - {r: 1.0205517, g: 0.6431373, b: 0, a: 0.84313726}
+      - {r: 1.0197363, g: 0.65882355, b: 0, a: 0.8352941}
+      - {r: 1.0187216, g: 0.6784314, b: 0, a: 0.827451}
+      - {r: 1.0175056, g: 0.69411767, b: 0, a: 0.81960785}
+      - {r: 1.0160837, g: 0.70980394, b: 0, a: 0.8117647}
+      - {r: 1.014452, g: 0.7294118, b: 0, a: 0.8039216}
+      - {r: 1.0126066, g: 0.74509805, b: 0, a: 0.79607844}
+      - {r: 1.0105429, g: 0.7607844, b: 0, a: 0.7882353}
+      - {r: 1.008255, g: 0.77647066, b: 0, a: 0.78039217}
+      - {r: 1.0057383, g: 0.7960785, b: 0, a: 0.77254903}
+      - {r: 1.0029888, g: 0.8117648, b: 0, a: 0.7647059}
+      - {r: 1, g: 0.82745105, b: 0, a: 0.75686276}
+  m_Flicker:
+    m_OverrideState: 0
+    m_Value: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Background
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: 8228358254764076954}
+  - {fileID: -3025470156994563098}
+--- !u!114 &8228358254764076954
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f87d2427ed3459e8c4345aacc689427, type: 3}
+  m_Name: BlurVol
+  m_EditorClassIdentifier: 
+  active: 1
+  m_Radius:
+    m_OverrideState: 1
+    m_Value: 0
+  m_Radial:
+    m_OverrideState: 1
+    m_Value: 0.216
+  m_Samples:
+    m_OverrideState: 1
+    m_Value: 18
+  m_Aspect:
+    m_OverrideState: 1
+    m_Value: -0.516
+  m_Angle:
+    m_OverrideState: 0
+    m_Value: 0

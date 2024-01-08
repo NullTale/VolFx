@@ -1,0 +1,1019 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8302108573905381623
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b112dda1e626fd4994e8b9c5b84df3e, type: 3}
+  m_Name: Adjustments
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: f3f2512ee1fe3774ba15927559ebdd5d, type: 3}
+--- !u!114 &-8145477083379399471
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a072868fa539457990c0ebac515b0937, type: 3}
+  m_Name: Pixelation
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: c060e586eee4f9c4080f767a110a135e, type: 3}
+  _lerp:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.005
+      inSlope: 0
+      outSlope: 0.995
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.995
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &-7363158787886000641
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde9fd001f184e6292e994e4224bf51f, type: 3}
+  m_Name: Gradient Map
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: 8a912d0c2f13ed944add667ae2ec726f, type: 3}
+--- !u!114 &-6243154567683193310
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447ed90198624d459ee11f60dbf86ffc, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: a181405f9bf44aef9074ccf0a6292106, type: 3}
+  _samples: 7
+  _scatter:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.8594513
+      inSlope: 0
+      outSlope: 0.16878475
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0
+      outWeight: 0.9040921
+    - serializedVersion: 3
+      time: 1
+      value: 2.1807241
+      inSlope: 7.4170947
+      outSlope: 1.3360401
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.060102284
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _mode: 0
+  _flicker:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 0.77
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  _flickerPeriod: 7
+  _bloomOnly: 0
+--- !u!114 &-5518495550892900404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df16983cdbc45e59623974172f2908b, type: 3}
+  m_Name: Character Fx
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  _event: 500
+  _format:
+    enabled: 1
+    value: 0
+  _volumeMask:
+    enabled: 1
+    value:
+      serializedVersion: 2
+      m_Bits: 2
+  _source:
+    _source: 1
+    _sourceTex: _inputTex
+    _renderTex: {fileID: 0}
+    _buffer: {fileID: 0}
+    _output: 0
+    _outputTex: _outputTex
+  _passes:
+    m_List:
+    - {fileID: 7643553589077060444}
+    - {fileID: -2284487352314097947}
+    - {fileID: 5524222000072214962}
+    - {fileID: 4256994242976719988}
+  _blitShader: {fileID: 4800000, guid: a8a709d9db2241741ab3032b946ef258, type: 3}
+--- !u!114 &-5162448555770623346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce235be8f89840da82c10948f114e44b, type: 3}
+  m_Name: Grayscale
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 0}
+  _material: {fileID: 0}
+  _isActive: 0
+--- !u!114 &-2951693333816784631
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b112dda1e626fd4994e8b9c5b84df3e, type: 3}
+  m_Name: Adjustments
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: f3f2512ee1fe3774ba15927559ebdd5d, type: 3}
+--- !u!114 &-2891853545911518639
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a072868fa539457990c0ebac515b0937, type: 3}
+  m_Name: Pixelation
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: c060e586eee4f9c4080f767a110a135e, type: 3}
+  _lerp:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.005
+      inSlope: 0
+      outSlope: 0.995
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.995
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &-2477344552549714263
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74a3c1ae8c044449049a98373e05c46, type: 3}
+  m_Name: Blur
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: b653195d866dd764b888bc5edc759074, type: 3}
+  _response:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.03
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _filter:
+  - 0.003236246
+  - 0.0077324267
+  - 0.019586023
+  - 0.03634456
+  - 0.055555556
+  - 0.074766554
+  - 0.091525085
+  - 0.10337868
+  - 0.10787487
+  - 0.10787487
+  - 0.10337868
+  - 0.091525085
+  - 0.074766554
+  - 0.055555556
+  - 0.03634456
+  - 0.019586023
+  - 0.0077324267
+  - 0.003236246
+--- !u!114 &-2284487352314097947
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447ed90198624d459ee11f60dbf86ffc, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: a181405f9bf44aef9074ccf0a6292106, type: 3}
+  _samples: 7
+  _scatter:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.8594513
+      inSlope: 0
+      outSlope: 0.16878475
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0
+      outWeight: 0.9040921
+    - serializedVersion: 3
+      time: 1
+      value: 2.1807241
+      inSlope: 7.4170947
+      outSlope: 1.3360401
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.060102284
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _mode: 0
+  _flicker:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 0.77
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  _flickerPeriod: 7
+  _bloomOnly: 0
+--- !u!114 &-1567537954651103883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df16983cdbc45e59623974172f2908b, type: 3}
+  m_Name: Background Fx
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  _event: 500
+  _format:
+    enabled: 1
+    value: 0
+  _volumeMask:
+    enabled: 1
+    value:
+      serializedVersion: 2
+      m_Bits: 16
+  _source:
+    _source: 1
+    _sourceTex: _inputTex
+    _renderTex: {fileID: 0}
+    _buffer: {fileID: 0}
+    _output: 0
+    _outputTex: _outputTex
+  _passes:
+    m_List:
+    - {fileID: -2951693333816784631}
+    - {fileID: -1406121207157098977}
+    - {fileID: -2477344552549714263}
+    - {fileID: -7363158787886000641}
+  _blitShader: {fileID: 4800000, guid: a8a709d9db2241741ab3032b946ef258, type: 3}
+--- !u!114 &-1406121207157098977
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447ed90198624d459ee11f60dbf86ffc, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: a181405f9bf44aef9074ccf0a6292106, type: 3}
+  _samples: 7
+  _scatter:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.8594513
+      inSlope: 0
+      outSlope: 0.16878475
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0
+      outWeight: 0.9040921
+    - serializedVersion: 3
+      time: 1
+      value: 2.1807241
+      inSlope: 7.4170947
+      outSlope: 1.3360401
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.060102284
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _mode: 0
+  _flicker:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 0.77
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  _flickerPeriod: 7
+  _bloomOnly: 0
+--- !u!114 &-1232705673203439401
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a072868fa539457990c0ebac515b0937, type: 3}
+  m_Name: Pixelation
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: c060e586eee4f9c4080f767a110a135e, type: 3}
+  _lerp:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.005
+      inSlope: 0
+      outSlope: 0.995
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.995
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &-136818791313127845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df16983cdbc45e59623974172f2908b, type: 3}
+  m_Name: Ui Fx
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  _event: 500
+  _format:
+    enabled: 1
+    value: 0
+  _volumeMask:
+    enabled: 1
+    value:
+      serializedVersion: 2
+      m_Bits: 32
+  _source:
+    _source: 1
+    _sourceTex: _inputTex
+    _renderTex: {fileID: 0}
+    _buffer: {fileID: 0}
+    _output: 0
+    _outputTex: _outputTex
+  _passes:
+    m_List:
+    - {fileID: 4042308608851114505}
+    - {fileID: -6243154567683193310}
+    - {fileID: 5000648122537518632}
+    - {fileID: 7295209022824667507}
+  _blitShader: {fileID: 4800000, guid: a8a709d9db2241741ab3032b946ef258, type: 3}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
+  m_Name: Urp Renderer
+  m_EditorClassIdentifier: 
+  debugShaders:
+    debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
+    hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
+  m_RendererFeatures:
+  - {fileID: 3639150745071183685}
+  - {fileID: -1567537954651103883}
+  - {fileID: -5518495550892900404}
+  - {fileID: -136818791313127845}
+  m_RendererFeatureMap: 45e7105452dc8032751d141189fc3eeacc7f74e2885d6ab35bc62ec108ec19fe
+  m_UseNativeRenderPass: 0
+  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
+  xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
+  shaders:
+    blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
+    copyDepthPS: {fileID: 4800000, guid: d6dae50ee9e1bfa4db75f19f99355220, type: 3}
+    screenSpaceShadowPS: {fileID: 0}
+    samplingPS: {fileID: 4800000, guid: 04c410c9937594faa893a11dceb85f7e, type: 3}
+    stencilDeferredPS: {fileID: 4800000, guid: e9155b26e1bc55942a41e518703fe304, type: 3}
+    fallbackErrorPS: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}
+    fallbackLoadingPS: {fileID: 4800000, guid: 7f888aff2ac86494babad1c2c5daeee2, type: 3}
+    materialErrorPS: {fileID: 4800000, guid: 5fd9a8feb75a4b5894c241777f519d4e, type: 3}
+    coreBlitPS: {fileID: 4800000, guid: 93446b5c5339d4f00b85c159e1159b7c, type: 3}
+    coreBlitColorAndDepthPS: {fileID: 4800000, guid: d104b2fc1ca6445babb8e90b0758136b, type: 3}
+    blitHDROverlay: {fileID: 4800000, guid: a89bee29cffa951418fc1e2da94d1959, type: 3}
+    cameraMotionVector: {fileID: 4800000, guid: c56b7e0d4c7cb484e959caeeedae9bbf, type: 3}
+    objectMotionVector: {fileID: 4800000, guid: 7b3ede40266cd49a395def176e1bc486, type: 3}
+    dataDrivenLensFlare: {fileID: 4800000, guid: 6cda457ac28612740adb23da5d39ea92, type: 3}
+  m_AssetVersion: 2
+  m_OpaqueLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_TransparentLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_DefaultStencilState:
+    overrideStencilState: 0
+    stencilReference: 0
+    stencilCompareFunction: 8
+    passOperation: 2
+    failOperation: 0
+    zFailOperation: 0
+  m_ShadowTransparentReceive: 1
+  m_RenderingMode: 0
+  m_DepthPrimingMode: 0
+  m_CopyDepthMode: 1
+  m_AccurateGbufferNormals: 0
+  m_IntermediateTextureMode: 1
+--- !u!114 &2839286635806888873
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447ed90198624d459ee11f60dbf86ffc, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: a181405f9bf44aef9074ccf0a6292106, type: 3}
+  _samples: 7
+  _scatter:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.8594513
+      inSlope: 0
+      outSlope: 0.16878475
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0
+      outWeight: 0.9040921
+    - serializedVersion: 3
+      time: 1
+      value: 2.1807241
+      inSlope: 7.4170947
+      outSlope: 1.3360401
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.060102284
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _mode: 0
+  _flicker:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 0.77
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  _flickerPeriod: 7
+  _bloomOnly: 0
+--- !u!114 &3639150745071183685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df16983cdbc45e59623974172f2908b, type: 3}
+  m_Name: Main Fx
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  _event: 600
+  _format:
+    enabled: 1
+    value: 0
+  _volumeMask:
+    enabled: 0
+    value:
+      serializedVersion: 2
+      m_Bits: 1
+  _source:
+    _source: 0
+    _sourceTex: _inputTex
+    _renderTex: {fileID: 0}
+    _buffer: {fileID: 0}
+    _output: 0
+    _outputTex: _outputTex
+  _passes:
+    m_List:
+    - {fileID: -8302108573905381623}
+    - {fileID: 2839286635806888873}
+    - {fileID: 4974457428459928799}
+    - {fileID: 6412858531213722307}
+    - {fileID: 7958142798369264448}
+  _blitShader: {fileID: 4800000, guid: a8a709d9db2241741ab3032b946ef258, type: 3}
+--- !u!114 &3999552821942770099
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a072868fa539457990c0ebac515b0937, type: 3}
+  m_Name: Pixelation
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: c060e586eee4f9c4080f767a110a135e, type: 3}
+  _lerp:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.005
+      inSlope: 0
+      outSlope: 0.995
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.995
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &4042308608851114505
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b112dda1e626fd4994e8b9c5b84df3e, type: 3}
+  m_Name: Adjustments
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: f3f2512ee1fe3774ba15927559ebdd5d, type: 3}
+--- !u!114 &4256994242976719988
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde9fd001f184e6292e994e4224bf51f, type: 3}
+  m_Name: Gradient Map
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: 8a912d0c2f13ed944add667ae2ec726f, type: 3}
+--- !u!114 &4974457428459928799
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74a3c1ae8c044449049a98373e05c46, type: 3}
+  m_Name: Blur
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: b653195d866dd764b888bc5edc759074, type: 3}
+  _response:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.03
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _filter:
+  - 0.003236246
+  - 0.0077324267
+  - 0.019586023
+  - 0.03634456
+  - 0.055555556
+  - 0.074766554
+  - 0.091525085
+  - 0.10337868
+  - 0.10787487
+  - 0.10787487
+  - 0.10337868
+  - 0.091525085
+  - 0.074766554
+  - 0.055555556
+  - 0.03634456
+  - 0.019586023
+  - 0.0077324267
+  - 0.003236246
+--- !u!114 &5000648122537518632
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74a3c1ae8c044449049a98373e05c46, type: 3}
+  m_Name: Blur
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: b653195d866dd764b888bc5edc759074, type: 3}
+  _response:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.03
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _filter:
+  - 0.007228916
+  - 0.043749984
+  - 0.12409639
+  - 0.20444278
+  - 0.24096388
+  - 0.20444278
+  - 0.12409639
+  - 0.043749984
+  - 0.007228916
+--- !u!114 &5524222000072214962
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74a3c1ae8c044449049a98373e05c46, type: 3}
+  m_Name: Blur
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: b653195d866dd764b888bc5edc759074, type: 3}
+  _response:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.03
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _filter:
+  - 0.003236246
+  - 0.0077324267
+  - 0.019586023
+  - 0.03634456
+  - 0.055555556
+  - 0.074766554
+  - 0.091525085
+  - 0.10337868
+  - 0.10787487
+  - 0.10787487
+  - 0.10337868
+  - 0.091525085
+  - 0.074766554
+  - 0.055555556
+  - 0.03634456
+  - 0.019586023
+  - 0.0077324267
+  - 0.003236246
+--- !u!114 &6412858531213722307
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde9fd001f184e6292e994e4224bf51f, type: 3}
+  m_Name: Gradient Map
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: 8a912d0c2f13ed944add667ae2ec726f, type: 3}
+--- !u!114 &7295209022824667507
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde9fd001f184e6292e994e4224bf51f, type: 3}
+  m_Name: Gradient Map
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: 8a912d0c2f13ed944add667ae2ec726f, type: 3}
+--- !u!114 &7643553589077060444
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b112dda1e626fd4994e8b9c5b84df3e, type: 3}
+  m_Name: Adjustments
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: f3f2512ee1fe3774ba15927559ebdd5d, type: 3}
+--- !u!114 &7958142798369264448
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad09003f61e0caf4cbb886fd35d2aca6, type: 3}
+  m_Name: Grayscale
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: c5fa7babc479abd469d4374ef35ac259, type: 3}
