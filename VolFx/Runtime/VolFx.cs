@@ -45,6 +45,8 @@ namespace VolFx
             public RenderTexture  _renderTex;
             public Buffers.Buffer _buffer;
             public MaskOutput     _output;
+            [Tooltip("Draw result in camera view")]
+            public bool           _screenOutput;
             public string         _outputTex = "_outputTex";
             
             public enum Source
@@ -354,7 +356,8 @@ namespace VolFx
                 
                 bool _isCameraOverlay()
                 {
-                    return _owner._source._source == SourceOptions.Source.LayerMask && _owner._source._output == SourceOptions.MaskOutput.Camera;
+                    return (_owner._source._source == SourceOptions.Source.LayerMask && _owner._source._output == SourceOptions.MaskOutput.Camera)
+                           || (_owner._source._source != SourceOptions.Source.Camera && _owner._source._screenOutput);
                 }
                 
                 bool _isDrawler()

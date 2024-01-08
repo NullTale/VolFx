@@ -14,10 +14,10 @@ namespace VolFx.Editor
             return mode switch
             {
                 VolFx.SourceOptions.Source.Camera    => 1,
-                VolFx.SourceOptions.Source.GlobalTex => 2,
-                VolFx.SourceOptions.Source.RenderTex => 2,
-                VolFx.SourceOptions.Source.LayerMask => 2 + ((VolFx.SourceOptions.MaskOutput)property.FindPropertyRelative(nameof(VolFx._source._output)).intValue == VolFx.SourceOptions.MaskOutput.Texture ? 1 : 0),
-                VolFx.SourceOptions.Source.Buffer    => 2,
+                VolFx.SourceOptions.Source.GlobalTex => 3,
+                VolFx.SourceOptions.Source.RenderTex => 3,
+                VolFx.SourceOptions.Source.LayerMask => 2 + ((VolFx.SourceOptions.MaskOutput)property.FindPropertyRelative(nameof(VolFx._source._output)).intValue == VolFx.SourceOptions.MaskOutput.Texture ? 2 : 0),
+                VolFx.SourceOptions.Source.Buffer    => 3,
                 _                                    => throw new ArgumentOutOfRangeException()
             } * EditorGUIUtility.singleLineHeight;
         }
@@ -28,6 +28,7 @@ namespace VolFx.Editor
             var tex   = property.FindPropertyRelative(nameof(VolFx._source._sourceTex));
             var rt    = property.FindPropertyRelative(nameof(VolFx._source._renderTex));
             var buf   = property.FindPropertyRelative(nameof(VolFx._source._buffer));
+            var cam   = property.FindPropertyRelative(nameof(VolFx._source._screenOutput));
             
             var output    = property.FindPropertyRelative(nameof(VolFx._source._output));
             var outputTex = property.FindPropertyRelative(nameof(VolFx._source._outputTex));
@@ -42,17 +43,22 @@ namespace VolFx.Editor
                     break;
                 case VolFx.SourceOptions.Source.GlobalTex:
                     EditorGUI.PropertyField(_fieldRect(line ++), tex, true);
+                    EditorGUI.PropertyField(_fieldRect(line ++), cam, true);
                     break;
                 case VolFx.SourceOptions.Source.RenderTex:
                     EditorGUI.PropertyField(_fieldRect(line ++), rt, true);
+                    EditorGUI.PropertyField(_fieldRect(line ++), cam, true);
                     break;
                 case VolFx.SourceOptions.Source.LayerMask:
                     EditorGUI.PropertyField(_fieldRect(line ++), output, true);
                     if (((VolFx.SourceOptions.MaskOutput)output.intValue) == VolFx.SourceOptions.MaskOutput.Texture)
                         EditorGUI.PropertyField(_fieldRect(line ++), outputTex, true);
+                    if (((VolFx.SourceOptions.MaskOutput)output.intValue) != VolFx.SourceOptions.MaskOutput.Camera)
+                        EditorGUI.PropertyField(_fieldRect(line ++), cam, true);
                     break;
                 case VolFx.SourceOptions.Source.Buffer:
                     EditorGUI.PropertyField(_fieldRect(line ++), buf, true);
+                    EditorGUI.PropertyField(_fieldRect(line ++), cam, true);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
