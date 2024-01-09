@@ -117,6 +117,9 @@ namespace VolFx
                 Init();
             }
 
+            /// <summary>
+            /// called to perform rendering
+            /// </summary>
             public virtual void Invoke(CommandBuffer cmd, RTHandle source, RTHandle dest, ScriptableRenderContext context, ref RenderingData renderingData)
             {
                 Utils.Blit(cmd, source, dest, _material, 0, Invert);
