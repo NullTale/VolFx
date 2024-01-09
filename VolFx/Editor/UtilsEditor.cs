@@ -9,27 +9,6 @@ using Object = UnityEngine.Object;
 //  VolFx © NullTale - https://twitter.com/NullTale/
 namespace VolFx
 {
-    internal static class CustomDefines
-    {
-        [UnityEditor.Callbacks.DidReloadScripts]
-        private static void CreateAssetWhenReady()
-        {
-            UtilsEditor.AddDefineIfNecessary("VOL_FX");
-            /*if(EditorApplication.isCompiling || EditorApplication.isUpdating)
-            {
-                EditorApplication.delayCall += CreateAssetWhenReady;
-                return;
-            }
-         
-            EditorApplication.delayCall += () => AddDefineIfNecessary("VOL_FX");*/
-        }
-        //[InitializeOnLoadMethod]
-        /*private static void OnInitialized()
-        {
-            AddDefineIfNecessary("VOL_FX");
-            //AssemblyReloadEvents.beforeAssemblyReload += () => AddDefineIfNecessary("VOL_FX",  );
-        }*/
-    }
     internal static class UtilsEditor
     {
         public class DisablingScope : IDisposable
@@ -54,81 +33,6 @@ namespace VolFx
         }
         
         // =======================================================================
-        public static void AddDefineIfNecessary(string def)
-        {
-            var tgs = new BuildTargetGroup[] { 
-                BuildTargetGroup.Android,
-                BuildTargetGroup.Standalone,
-                BuildTargetGroup.WebGL,
-                BuildTargetGroup.Switch,
-                BuildTargetGroup.XboxOne,
-                BuildTargetGroup.PS4,
-                BuildTargetGroup.PS5 };
-            
-            foreach (var tg in tgs)
-                AddDefineIfNecessary(def, tg);
-        }
-        
-        public static void RemoveDefineIfNecessary(string def)
-        {
-            var tgs = new BuildTargetGroup[] { 
-                BuildTargetGroup.Android,
-                BuildTargetGroup.Standalone,
-                BuildTargetGroup.WebGL,
-                BuildTargetGroup.Switch,
-                BuildTargetGroup.XboxOne,
-                BuildTargetGroup.PS4,
-                BuildTargetGroup.PS5 };
-            
-            foreach (var tg in tgs)
-                RemoveDefineIfNecessary(def, tg);
-        }
-        
-        public static void AddDefineIfNecessary(string def, BuildTargetGroup tg)
-        {
-            var defines = PlayerSettings.GetScriptingDefineSymbolsForGroup(tg);
-     
-            if (defines == null) 
-                defines = def;
-            else 
-            if (defines.Length == 0) 
-                defines = def;
-            else 
-            if (defines.IndexOf(def, 0, StringComparison.Ordinal) < 0)
-                defines += ";" + def;
-     
-            PlayerSettings.SetScriptingDefineSymbolsForGroup(tg, defines);
-        }
-     
-        public static void RemoveDefineIfNecessary(string def, BuildTargetGroup tg)
-        {
-            var defines = PlayerSettings.GetScriptingDefineSymbolsForGroup(tg);
-     
-            if (defines.StartsWith(def + ";"))
-            {
-                // First of multiple defines.
-                defines = defines.Remove(0, def.Length + 1);
-            }
-            else if (defines.StartsWith(def))
-            {
-                // The only define.
-                defines = defines.Remove(0, def.Length);
-            }
-            else if (defines.EndsWith(";" + def))
-            {
-                // Last of multiple defines.
-                defines = defines.Remove(defines.Length - def.Length - 1, def.Length + 1);
-            }
-            else
-            {
-                // Somewhere in the middle or not defined.
-                var index = defines.IndexOf(def, 0, System.StringComparison.Ordinal);
-                if (index >= 0) { defines = defines.Remove(index, def.Length + 1); }
-            }
-     
-            PlayerSettings.SetScriptingDefineSymbolsForGroup(tg, defines);
-        }
-    
         public static Rect Label(this Rect rect)
         {
             return new Rect(rect.x, rect.y, EditorGUIUtility.labelWidth, EditorGUIUtility.singleLineHeight);
