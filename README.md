@@ -53,25 +53,29 @@ Example of global texture accessed via shader graph (name match, no exposed chec
 
 ## Build in Effects
 
-VolFx was built to be highly configurable and most of the effects are powerful in their [combination](https://twitter.com/NullTale/status/1693158627442364490). <br>
+VolFx was built to be highly configurable and most of the effects are powerful in their [combination](https://twitter.com/NullTale/status/1693158627442364490) <br>
 There can be a number of custom `Blit` passes controlled via material for easy effect implementation(permanent effects).
 
-Extended Color Adjustments, with the curve you can adjust the range on which part of the image to apply Color Adjustement <br>
+#### Extended Color Adjustments
+With the curve you can adjust the range on which part of the image to apply Color Adjustement <br>
 Other option are classic exept the alpha channel that used to adjust alpha chennel to blend images properly <br>
 
 ![Adjustments](https://github.com/NullTale/VolFx/assets/1497430/af84b49d-22c3-47fd-a315-d4e8f7b35ac9)
 
-Extended Bloom effect, threshold controlled by curve, color made with gradient(support blending) <br>
-Also has some advanved options in effect passm like flickering, samples count and scuttering curve. <br>
+#### Extended Bloom
+Threshold controlled by curve, color made with gradient(support blending) <br>
+Also has some advanved options in effect pass like flickering, samples count and scuttering curve. <br>
 Basically extended remplementation of moust popular effect to process the images <br>
 
 ![Bloom](https://github.com/NullTale/VolFx/assets/1497430/12475cb3-ab40-4e89-a3ac-6730155ed075)
 
-Just simple blur with radial and distortion options
+#### Blur
+Just simple Blur with radial and distortion options
 
 ![Blur](https://github.com/NullTale/VolFx/assets/1497430/28b6a7ab-1eae-4053-8088-99a20cc9a6b3)
 
-Colorization effect taken from pupular grathic editors [GradientMap](https://www.bcit.cc/cms/lib04/NJ03000372/Centricity/Domain/299/p6_howto_use_gradient_maps%2018.pdf) <br>
+#### GradientMap
+Colorization effect taken from pupular graphic editors [GradientMap](https://www.bcit.cc/cms/lib04/NJ03000372/Centricity/Domain/299/p6_howto_use_gradient_maps%2018.pdf) <br>
 Very powerfull tool to colorize and adjust images, support masking and gradient blending at runtime <br>
 
 ![Gradient Map](https://github.com/NullTale/VolFx/assets/1497430/819c808c-9b79-4f6c-b618-fffda4c8cea2)
@@ -141,13 +145,21 @@ public virtual void Invoke(CommandBuffer cmd, RTHandle source, RTHandle dest,
 }
 ```
 
-### PostArt
+## PostArt
 
 More effects can be [downloaded](https://github.com/NullTale/PixelationFx) separately for use in combination<br>
 If `VolFx` is installed they will work as part of the framework and will not appear in the RenderFeature list
+  
+Three effects applied sequentially to a 3D object
 
+![_cover](https://github.com/NullTale/VolFx/assets/1497430/aff5ebb1-6698-417c-9f2a-51388696c78f)<br>
+
+* [Pixelation](https://github.com/NullTale/PixelationFx/)
+* [Outline](https://github.com/NullTale/OutlineFilter)
+* [VHS](https://github.com/NullTale/VhsFx)
+  
 ![_cover](https://github.com/NullTale/PixelationFx/assets/1497430/bae56685-73f5-4f0a-b87b-581ec462debd)
 
-![_cover](https://github.com/NullTale/FlowFx/assets/1497430/99ddc6d9-e727-4f3f-8b36-9f3d8ec5aebd)
-
 ![_cover](https://github.com/NullTale/OutlineFilter/assets/1497430/ca30a418-585d-40f0-8ccf-cb847d8e5f46)
+
+![_cover](https://github.com/NullTale/VhsFx/assets/1497430/136361c4-acfc-4142-938a-69c9bdf2b2be)
