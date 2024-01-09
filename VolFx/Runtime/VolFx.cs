@@ -174,7 +174,7 @@ namespace VolFx
             /// <summary>
             /// used for optimization purposes, returns true if we need to call _editorSetup function
             /// </summary>
-            internal virtual bool _editorValidate => false;
+            protected virtual bool _editorValidate => false;
             
             /// <summary>
             /// editor validation function, used to gather additional references 
