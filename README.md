@@ -25,7 +25,11 @@ Volume control allows to tweack texture at runtime to achive desiared light visu
 
 ![_Light](https://github.com/NullTale/VolFx/assets/1497430/2bed6140-1b82-41a6-8b9d-adc991334e3c)<br>
 
-Can have may instances order of post effects can be configured as their options<br>
+Work with 3D
+
+![_cover](https://github.com/NullTale/VolFx/assets/1497430/58f6af02-83ae-4b1a-9f3c-9d995229c02f)
+
+Can have may instances, order of post effects can be configured as their options<br>
 
 ![_cover](https://github.com/NullTale/VolFx/assets/1497430/22b67d1c-80fd-4a24-8980-2b7e0bea6a79)<br>
 
@@ -50,6 +54,7 @@ that can be post processed at runtime and used later throug a shader
 Example of global texture accessed via shader graph (name match, no exposed checkbox)
 
 ![image](https://github.com/NullTale/VolFx/assets/1497430/2b99bebc-cc9c-4d1c-ae5d-2ada10f9be1f)
+
 
 ## Build in Effects
 
@@ -150,16 +155,13 @@ public virtual void Invoke(CommandBuffer cmd, RTHandle source, RTHandle dest,
 More effects can be [downloaded](https://github.com/NullTale/PixelationFx) separately for use in combination<br>
 If `VolFx` is installed they will work as part of the framework and will not appear in the RenderFeature list
   
-Three effects applied sequentially to a 3D object
+Effects applied sequentially to a 3D object
 
-![_cover](https://github.com/NullTale/VolFx/assets/1497430/aff5ebb1-6698-417c-9f2a-51388696c78f)<br>
+![_cover](https://github.com/NullTale/VolFx/assets/1497430/38b7fa20-84f6-4717-bc26-cd1333c749bf)<br>
 
 * [Pixelation](https://github.com/NullTale/PixelationFx/)
 * [Outline](https://github.com/NullTale/OutlineFilter)
 * [VHS](https://github.com/NullTale/VhsFx)
-  
-![_cover](https://github.com/NullTale/PixelationFx/assets/1497430/bae56685-73f5-4f0a-b87b-581ec462debd)
-
-![_cover](https://github.com/NullTale/OutlineFilter/assets/1497430/ca30a418-585d-40f0-8ccf-cb847d8e5f46)
-
-![_cover](https://github.com/NullTale/VhsFx/assets/1497430/136361c4-acfc-4142-938a-69c9bdf2b2be)
+* [ScreenOutline](https://github.com/NullTale/OutlineFilter)
+* [ImageFlow](https://github.com/NullTale/FlowFx)
+* [OldMovie](https://github.com/NullTale/OldMovieFx)
