@@ -94,7 +94,7 @@ There is an example of simple grayscale effect that can be found in `Project Sam
 All effect must be inherated from `VolFx.Pass` and then added to a `VolFxRenderFeature` <br>
 Material creates automatically using `ShaderName` attribute, `VolumeSettings` implemented using [Unity API](https://docs.unity3d.com/Packages/com.unity.render-pipelines.core@7.1/api/UnityEngine.Rendering.VolumeComponent.html)
 
-```
+```C#
 [ShaderName("Hidden/VolFx/Grayscale")] // shader name for pass material
 public class GrayscalePass : VolFx.Pass
 {
@@ -115,7 +115,7 @@ public class GrayscalePass : VolFx.Pass
 }
 ```
 Grayscale shader
-```
+```C#
 Shader "Hidden/VolFx/Grayscale" // name of the shader for ShaderNameAttribute
 ...
 
@@ -141,7 +141,7 @@ half4 frag(const frag_in i) : SV_Target
 }
 ```
 Feature work as a wrapper but can be extended by override low level methods, to gain access to a CommandBuffer and other rendering API stuff<br>
-```
+```C#
 /// called to perform rendering
 public virtual void Invoke(CommandBuffer cmd, RTHandle source, RTHandle dest,
                            ScriptableRenderContext context, ref RenderingData renderingData)
