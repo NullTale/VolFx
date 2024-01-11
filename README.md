@@ -2,8 +2,8 @@
 [![Twitter](https://img.shields.io/badge/Follow-Twitter?logo=twitter&color=white)](https://twitter.com/NullTale)
 [![Boosty](https://img.shields.io/badge/Support-Boosty?logo=boosty&color=white)](https://boosty.to/nulltale)
 
-VFX Toolkit is customizable multy post-processing vis buffer system<br>
-that allows to build a scene processing architecture for visual effects creation ✨
+VolFx is customizable multy post-processing vis buffer system<br>
+that allows to build a custom scene processing architecture for visual effects creation ✨
 
 ## Features
 * Custom passes - expandable, has minimal set of custom effects and generic blit feature
@@ -25,7 +25,11 @@ Volume control allows to tweack texture at runtime to achive desiared light visu
 
 ![_Light](https://github.com/NullTale/VolFx/assets/1497430/2bed6140-1b82-41a6-8b9d-adc991334e3c)<br>
 
-Can have may instances order of post effects can be configured as their options<br>
+Work with 3D
+
+![_cover](https://github.com/NullTale/VolFx/assets/1497430/58f6af02-83ae-4b1a-9f3c-9d995229c02f)
+
+Can have may instances, order of post effects can be configured as their options<br>
 
 ![_cover](https://github.com/NullTale/VolFx/assets/1497430/22b67d1c-80fd-4a24-8980-2b7e0bea6a79)<br>
 
@@ -51,27 +55,32 @@ Example of global texture accessed via shader graph (name match, no exposed chec
 
 ![image](https://github.com/NullTale/VolFx/assets/1497430/2b99bebc-cc9c-4d1c-ae5d-2ada10f9be1f)
 
+
 ## Build in Effects
 
-VolFx was built to be highly configurable and most of the effects are powerful in their [combination](https://twitter.com/NullTale/status/1693158627442364490). <br>
+VolFx was built to be highly configurable and most of the effects are powerful in their [combination](https://twitter.com/NullTale/status/1693158627442364490) <br>
 There can be a number of custom `Blit` passes controlled via material for easy effect implementation(permanent effects).
 
-Extended Color Adjustments, with the curve you can adjust the range on which part of the image to apply Color Adjustement <br>
+#### Extended Color Adjustments
+With the curve you can adjust the range on which part of the image to apply Color Adjustement <br>
 Other option are classic exept the alpha channel that used to adjust alpha chennel to blend images properly <br>
 
 ![Adjustments](https://github.com/NullTale/VolFx/assets/1497430/af84b49d-22c3-47fd-a315-d4e8f7b35ac9)
 
-Extended Bloom effect, threshold controlled by curve, color made with gradient(support blending) <br>
-Also has some advanved options in effect passm like flickering, samples count and scuttering curve. <br>
+#### Extended Bloom
+Threshold controlled by curve, color made with gradient(support blending) <br>
+Also has some advanved options in effect pass like flickering, samples count and scuttering curve. <br>
 Basically extended remplementation of moust popular effect to process the images <br>
 
 ![Bloom](https://github.com/NullTale/VolFx/assets/1497430/12475cb3-ab40-4e89-a3ac-6730155ed075)
 
-Just simple blur with radial and distortion options
+#### Blur
+Just simple Blur with radial and distortion options
 
 ![Blur](https://github.com/NullTale/VolFx/assets/1497430/28b6a7ab-1eae-4053-8088-99a20cc9a6b3)
 
-Colorization effect taken from pupular grathic editors [GradientMap](https://www.bcit.cc/cms/lib04/NJ03000372/Centricity/Domain/299/p6_howto_use_gradient_maps%2018.pdf) <br>
+#### GradientMap
+Colorization effect taken from pupular graphic editors [GradientMap](https://www.bcit.cc/cms/lib04/NJ03000372/Centricity/Domain/299/p6_howto_use_gradient_maps%2018.pdf) <br>
 Very powerfull tool to colorize and adjust images, support masking and gradient blending at runtime <br>
 
 ![Gradient Map](https://github.com/NullTale/VolFx/assets/1497430/819c808c-9b79-4f6c-b618-fffda4c8cea2)
@@ -85,7 +94,7 @@ There is an example of simple grayscale effect that can be found in `Project Sam
 All effect must be inherated from `VolFx.Pass` and then added to a `VolFxRenderFeature` <br>
 Material creates automatically using `ShaderName` attribute, `VolumeSettings` implemented using [Unity API](https://docs.unity3d.com/Packages/com.unity.render-pipelines.core@7.1/api/UnityEngine.Rendering.VolumeComponent.html)
 
-```
+```C#
 [ShaderName("Hidden/VolFx/Grayscale")] // shader name for pass material
 public class GrayscalePass : VolFx.Pass
 {
@@ -106,7 +115,7 @@ public class GrayscalePass : VolFx.Pass
 }
 ```
 Grayscale shader
-```
+```C#
 Shader "Hidden/VolFx/Grayscale" // name of the shader for ShaderNameAttribute
 ...
 
@@ -132,7 +141,7 @@ half4 frag(const frag_in i) : SV_Target
 }
 ```
 Feature work as a wrapper but can be extended by override low level methods, to gain access to a CommandBuffer and other rendering API stuff<br>
-```
+```C#
 /// called to perform rendering
 public virtual void Invoke(CommandBuffer cmd, RTHandle source, RTHandle dest,
                            ScriptableRenderContext context, ref RenderingData renderingData)
@@ -141,13 +150,18 @@ public virtual void Invoke(CommandBuffer cmd, RTHandle source, RTHandle dest,
 }
 ```
 
-### PostArt
+## PostArt
 
 More effects can be [downloaded](https://github.com/NullTale/PixelationFx) separately for use in combination<br>
 If `VolFx` is installed they will work as part of the framework and will not appear in the RenderFeature list
+  
+Effects applied sequentially to a 3D object
 
-![_cover](https://github.com/NullTale/PixelationFx/assets/1497430/bae56685-73f5-4f0a-b87b-581ec462debd)
+![_cover](https://github.com/NullTale/VolFx/assets/1497430/38b7fa20-84f6-4717-bc26-cd1333c749bf)<br>
 
-![_cover](https://github.com/NullTale/FlowFx/assets/1497430/99ddc6d9-e727-4f3f-8b36-9f3d8ec5aebd)
-
-![_cover](https://github.com/NullTale/OutlineFilter/assets/1497430/ca30a418-585d-40f0-8ccf-cb847d8e5f46)
+* [Pixelation](https://github.com/NullTale/PixelationFx/)
+* [Outline](https://github.com/NullTale/OutlineFilter)
+* [VHS](https://github.com/NullTale/VhsFx)
+* [ScreenOutline](https://github.com/NullTale/OutlineFilter)
+* [ImageFlow](https://github.com/NullTale/FlowFx)
+* [OldMovie](https://github.com/NullTale/OldMovieFx)
