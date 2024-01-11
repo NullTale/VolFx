@@ -169,6 +169,7 @@ MonoBehaviour:
     _renderTex: {fileID: 0}
     _buffer: {fileID: 0}
     _output: 0
+    _screenOutput: 0
     _outputTex: _outputTex
   _passes:
     m_List:
@@ -405,6 +406,7 @@ MonoBehaviour:
     _renderTex: {fileID: 0}
     _buffer: {fileID: 0}
     _output: 0
+    _screenOutput: 0
     _outputTex: _outputTex
   _passes:
     m_List:
@@ -554,13 +556,14 @@ MonoBehaviour:
     _renderTex: {fileID: 0}
     _buffer: {fileID: 0}
     _output: 0
+    _screenOutput: 0
     _outputTex: _outputTex
   _passes:
     m_List:
     - {fileID: 4042308608851114505}
+    - {fileID: 7295209022824667507}
     - {fileID: -6243154567683193310}
     - {fileID: 5000648122537518632}
-    - {fileID: 7295209022824667507}
   _blitShader: {fileID: 4800000, guid: a8a709d9db2241741ab3032b946ef258, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -724,6 +727,7 @@ MonoBehaviour:
     _renderTex: {fileID: 0}
     _buffer: {fileID: 0}
     _output: 0
+    _screenOutput: 0
     _outputTex: _outputTex
   _passes:
     m_List:
