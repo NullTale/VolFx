@@ -9,7 +9,7 @@ that allows building a custom scene processing architecture for visual effects c
 * Custom passes - expandable, has minimal set of custom effects and generic blit feature
 * Targeting post processing - can be applyed to scene objects by layer mask
 * Volume controll - all build in effects controlled via volume profile and linked to a layer mask, so scene processing can be easily made dynamic
-* Buffer system - can render object to a buffer texture to provide additional textures(like light maps, pattern animations, height etc) then process and use later throug the shader for visual effects
+* Buffer system - can render object to a buffer texture to provide additional textures(like light maps, pattern animations, height etc) then process and use them later throug a shader
 * Configurable pipeline - each effect can be reordered and configurade depending on the application
 * Part of Artwork project - all effects from [PostArt](https://github.com/NullTale/PixelationFx) projects can be added as passes to VolFx without cluttering Volume or RenderFeature's list
 
