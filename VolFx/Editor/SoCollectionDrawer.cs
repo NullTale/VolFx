@@ -167,7 +167,9 @@ namespace VolFx
                         AssetDatabase.RemoveObjectFromAsset(obj);
                         Object.DestroyImmediate(element.objectReferenceValue);
                         element.objectReferenceValue = null;
+#if !UNITY_2022_3_OR_NEWER
                         AssetDatabase.SaveAssets();
+#endif
                     }
 
                     var index = list.index;
@@ -384,7 +386,9 @@ namespace VolFx
                     // create
                     element.name = varName;
                     AssetDatabase.AddObjectToAsset(element, propertyList.serializedObject.targetObject);
+#if !UNITY_2022_3_OR_NEWER
                     AssetDatabase.SaveAssets();
+#endif
                     propertyList.GetArrayElementAtIndex(propertyList.arraySize - 1).objectReferenceValue = element;
                     element.hideFlags = HideFlags.HideInInspector | HideFlags.HideInHierarchy;
 

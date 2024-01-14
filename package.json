@@ -1,7 +1,7 @@
 {
   "name": "www.nulltale.volfx",
   "displayName": "VolFx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2022.1",
   "description": "VFX Toolkit ☄ targeted post-processing with custom scene architecture",
   "documentationUrl": "https://github.com/NullTale/VolFx",
