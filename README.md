@@ -5,6 +5,8 @@
 VolFx is a customizable multi post-processing and buffer system<br>
 that allows building a custom scene processing architecture for visual effects creation ✨
 
+Tested with 2022.2 Web
+
 ## Features
 * Custom passes - expandable, has minimal set of custom effects and generic blit feature
 * Targeting post processing - can be applyed to scene objects by layer mask
