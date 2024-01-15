@@ -34,7 +34,16 @@ namespace VolFx
         [NonSerialized]
         public PassExecution _execution;
 
-        public VolumeStack Stack => _execution._stack;
+        public VolumeStack Stack
+        {
+            get
+            {
+                if (_execution._stack == null)
+                    _execution._stack = _volumeMask.Enabled ? VolumeManager.instance.CreateStack() : VolumeManager.instance.stack;
+                
+                return _execution._stack;
+            }
+        }
 
         // =======================================================================
         [Serializable]
@@ -199,7 +208,6 @@ namespace VolFx
             // =======================================================================
             public void Init()
             {
-                _stack = _owner._volumeMask.Enabled ? VolumeManager.instance.CreateStack() : VolumeManager.instance.stack;
                 renderPassEvent = _owner._event;
                 
                 _renderTarget = new RenderTargetFlip(nameof(_renderTarget));
@@ -212,7 +220,7 @@ namespace VolFx
 
             public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
             {
-                if (_owner._volumeMask.Enabled)
+                if (_owner._volumeMask.Enabled && _stack != null)
                     VolumeManager.instance.Update(_stack, null, _owner._volumeMask.Value);
             
                 foreach (var pass in _owner._passes.Values.Where(n => n != null))
@@ -441,7 +449,7 @@ namespace VolFx
             if (disposing == false)
                 return;
             
-            if (_volumeMask.Enabled && _execution != null)
+            if (_volumeMask.Enabled && _execution != null && _execution._stack != null)
                  VolumeManager.instance.DestroyStack(_execution._stack);
         }
     }
