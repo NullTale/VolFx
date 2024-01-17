@@ -2,7 +2,7 @@
 [![Twitter](https://img.shields.io/badge/Follow-Twitter?logo=twitter&color=white)](https://twitter.com/NullTale)
 [![Boosty](https://img.shields.io/badge/Support-Boosty?logo=boosty&color=white)](https://boosty.to/nulltale)
 
-VolFx is a customizable multi post-processing and buffer system for Unity Urp<br>
+VolFx is a customizable multi post-processing with buffer system for Unity Urp<br>
 that allows building a custom scene processing architecture for visual effects creation ✨
 
 Tested with 2022.2, 2023.2 Web
@@ -162,7 +162,6 @@ Effects applied sequentially to a 3D object
 ![_cover](https://github.com/NullTale/VolFx/assets/1497430/38b7fa20-84f6-4717-bc26-cd1333c749bf)<br>
 
 * [Pixelation](https://github.com/NullTale/PixelationFx/)
-* [Outline](https://github.com/NullTale/OutlineFilter)
 * [VHS](https://github.com/NullTale/VhsFx)
 * [ScreenOutline](https://github.com/NullTale/OutlineFilter)
 * [ImageFlow](https://github.com/NullTale/FlowFx)
