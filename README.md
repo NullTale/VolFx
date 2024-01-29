@@ -81,12 +81,6 @@ Just simple Blur with radial and distortion options
 
 ![Blur](https://github.com/NullTale/VolFx/assets/1497430/28b6a7ab-1eae-4053-8088-99a20cc9a6b3)
 
-#### GradientMap
-Colorization effect taken from pupular graphic editors [GradientMap](https://www.bcit.cc/cms/lib04/NJ03000372/Centricity/Domain/299/p6_howto_use_gradient_maps%2018.pdf) <br>
-Very powerfull tool to colorize and adjust images, support masking and gradient blending at runtime <br>
-
-![Gradient Map](https://github.com/NullTale/VolFx/assets/1497430/819c808c-9b79-4f6c-b618-fffda4c8cea2)
-
 ## Custom Effect
 
 There is an example of simple grayscale effect that can be found in `Project Samples`
@@ -166,3 +160,4 @@ Effects applied sequentially to a 3D object
 * [ScreenOutline](https://github.com/NullTale/OutlineFilter)
 * [ImageFlow](https://github.com/NullTale/FlowFx)
 * [OldMovie](https://github.com/NullTale/OldMovieFx)
+* [GradientMap](https://github.com/NullTale/GradientMapFilter)
