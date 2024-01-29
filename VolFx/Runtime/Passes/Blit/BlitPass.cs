@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -7,8 +8,11 @@ namespace VolFx
 {
     public class BlitPass : VolFx.Pass
     {
+        [SerializeField] [Tooltip("Used if need to gain the access to the pass in editor")]
+        internal  bool       _showInInspector;
+        [Tooltip("Invert draw matrix")]
         public bool _invert;
-        
+
         public Material      _mat;
         public Optional<int> _pass;
 
@@ -20,6 +24,27 @@ namespace VolFx
             _material = _mat;
             return _mat != null;
         }
+        
+        public virtual void OnValidate()
+        {
+            if (_showInInspector && hideFlags != HideFlags.None || _showInInspector == false && hideFlags != (HideFlags.HideInInspector | HideFlags.HideInHierarchy))
+                return;
+            
+            if (_showInInspector && hideFlags != HideFlags.None)
+                hideFlags = HideFlags.None;
+            else
+                this.hideFlags = HideFlags.HideInInspector | HideFlags.HideInHierarchy;
+            
+            _updateAsset();
+            
+            // =======================================================================
+            async void _updateAsset()
+            {
+                await Task.Yield();
+                UnityEditor.AssetDatabase.SaveAssets();
+            }
+        }
+
 
         public override void Invoke(CommandBuffer cmd, RTHandle source, RTHandle dest, ScriptableRenderContext context, ref RenderingData renderingData)
         {

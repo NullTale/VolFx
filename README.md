@@ -61,7 +61,7 @@ Example of global texture accessed via shader graph (name match, no exposed chec
 ## Build in Effects
 
 VolFx was built to be highly configurable and most of the effects are powerful in their [combination](https://twitter.com/NullTale/status/1693158627442364490) <br>
-There can be a number of custom `Blit` passes controlled via material for easy effect implementation(permanent effects).
+There can be a number of custom `Blit` passes controlled via material for easy effect implementation.
 
 #### Extended Color Adjustments
 With the curve you can adjust the range on which part of the image to apply Color Adjustement <br>
@@ -69,7 +69,7 @@ Other option are classic exept the alpha channel that used to adjust alpha chenn
 
 ![Adjustments](https://github.com/NullTale/VolFx/assets/1497430/af84b49d-22c3-47fd-a315-d4e8f7b35ac9)
 
-#### Extended Bloom
+#### Bloom
 Threshold controlled by curve, color made with gradient(support blending) <br>
 Also has some advanved options in effect pass like flickering, samples count and scuttering curve. <br>
 Basically extended remplementation of moust popular effect to process the images <br>

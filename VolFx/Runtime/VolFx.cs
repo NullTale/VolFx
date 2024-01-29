@@ -86,9 +86,8 @@ namespace VolFx
             protected Material         _material;
             private   bool             _isActive;
             
-            protected VolumeStack      Stack => _owner.Stack;
-            
-            protected virtual bool Invert => false;
+            protected         VolumeStack Stack  => _owner.Stack;
+            protected virtual bool        Invert => false;
 
             // =======================================================================
             internal bool IsActive
@@ -133,7 +132,7 @@ namespace VolFx
             {
                 Utils.Blit(cmd, source, dest, _material, 0, Invert);
             }
-            
+
             public void Validate()
             {
 #if UNITY_EDITOR
