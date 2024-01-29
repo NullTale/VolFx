@@ -431,6 +431,11 @@ namespace VolFx
         {
             _passes.Destroy();
         }
+        
+        public override void SetupRenderPasses(ScriptableRenderer renderer, in RenderingData renderingData)
+        {
+            _execution.ConfigureInput(ScriptableRenderPassInput.Color);
+        }
 
         public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
         {
