@@ -3,7 +3,7 @@
   "displayName": "VolFx",
   "version": "1.0.1",
   "unity": "2022.1",
-  "description": "VFX Toolkit ☄ targeted post-processing with custom scene architecture",
+  "description": "VFX Toolkit ☄ selective post-processing with buffer system",
   "documentationUrl": "https://github.com/NullTale/VolFx",
   "licensesUrl": "https://github.com/NullTale/VolFx/blob/master/LICENSE.md",
   "author": {
