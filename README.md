@@ -5,7 +5,7 @@
 [![Forum](https://img.shields.io/badge/Forum-asd?logo=ChatBot&color=blue)](https://forum.unity.com/threads/1542860)
 
 VolFx is a customizable multi post-processing with buffer system for Unity Urp<br>
-that allows building a custom scene processing architecture for visual effects creation ✨
+that allows build a custom scene processing architecture for visual effects creation ✨
 
 Tested with 2022.2, 2023.2 Web
 
