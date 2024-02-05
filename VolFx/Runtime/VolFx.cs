@@ -15,11 +15,11 @@ namespace VolFx
         
         [Tooltip("When to execute")]
         public RenderPassEvent               _event  = RenderPassEvent.BeforeRenderingPostProcessing;
-        [Tooltip("If not set camera format will be used")]
+        [Tooltip("If not set camera format will be used(usually it looses alpha and can't be used as overlay)")]
         public Optional<RenderTextureFormat> _format = new Optional<RenderTextureFormat>(RenderTextureFormat.ARGB32, true);
-        [Tooltip("Wich volumes to use")]
+        [Tooltip("Volume Settings Mask, also used as RenderFilter if Source option is set to the LayerMask mode")]
         public Optional<LayerMask>           _volumeMask = new Optional<LayerMask>(false);
-        [Tooltip("To which source apply post-processing")]
+        [Tooltip("Post processing source")]
         public SourceOptions                 _source = new SourceOptions();
         [Tooltip("RenderPasses and his execution order")]
         [SocUnique(typeof(BlitPass))] [SocFormat(_regexClear = "Pass$")]
@@ -49,13 +49,19 @@ namespace VolFx
         [Serializable]
         public class SourceOptions
         {
+            [Tooltip("Post processing source")]
             public Source         _source;
+            [Tooltip("Global Texture to process")]
             public string         _sourceTex = "_inputTex";
+            [Tooltip("Render Texture to process")]
             public RenderTexture  _renderTex;
+            [Tooltip("Buffer to process")]
             public Buffers.Buffer _buffer;
+            [Tooltip("Where to draw the result")]
             public MaskOutput     _output;
-            [Tooltip("Draw result in camera view")]
+            [Tooltip("Also draw post process result in the camera view")]
             public bool           _screenOutput;
+            [Tooltip("Name of the output texture")]
             public string         _outputTex = "_outputTex";
             
             public enum Source
