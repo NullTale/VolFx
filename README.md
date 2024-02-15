@@ -11,7 +11,7 @@ that allows build a custom scene processing architecture for visual effects crea
 Tested with 2022.2, 2023.2 Web
 
 * extended version on the [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
-* for visual effects control recomended use with [ScreenFx](https://assetstore.unity.com/packages/tools/camera/screenfx-270814)
+* visual effect can be controlled via timeline using [ScreenFx](https://assetstore.unity.com/packages/tools/camera/270814)
 * can use effects from [PostArt](https://github.com/NullTale/PixelationFx) project as render passes
 
 ## Features
@@ -38,11 +38,11 @@ Work with 3D
 
 ![_cover](https://github.com/NullTale/VolFx/assets/1497430/58f6af02-83ae-4b1a-9f3c-9d995229c02f)
 
-[AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928) base effects
+[AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/270928) base effects
 
 ![_cover](https://github.com/NullTale/VolFx/assets/1497430/13c87450-24a7-4d17-848c-692bd33486d2)
 
-Clip application with [ScreenFx](https://assetstore.unity.com/packages/tools/camera/screenfx-270814)
+Clip application with [ScreenFx](https://assetstore.unity.com/packages/tools/camera/270814)
 
 ![_ScreenFxCover](https://github.com/NullTale/VolFx/assets/1497430/cb89b908-ee2b-4716-ac14-3411968fe92e)
 
