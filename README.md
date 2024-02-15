@@ -3,11 +3,16 @@
 [![Discord](https://img.shields.io/badge/Discord-Discord?logo=discord&color=white)](https://discord.gg/CkdQvtA5un)
 [![Boosty](https://img.shields.io/badge/Support-Boosty?logo=boosty&color=white)](https://boosty.to/nulltale)
 [![Forum](https://img.shields.io/badge/Forum-asd?logo=ChatBot&color=blue)](https://forum.unity.com/threads/1542860)
+[![Asset Store](https://img.shields.io/badge/Asset%20Store-asd?logo=Unity&color=red)](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
 
 VolFx is a customizable multi post-processing with buffer system for Unity Urp<br>
 that allows build a custom scene processing architecture for visual effects creation ✨
 
 Tested with 2022.2, 2023.2 Web
+
+* extended version on the [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
+* for visual effects control recomended use with [ScreenFx](https://assetstore.unity.com/packages/tools/camera/screenfx-270814)
+* can use effects from [PostArt](https://github.com/NullTale/PixelationFx) project as render passes
 
 ## Features
 * Custom passes - expandable, has minimal set of custom effects and generic blit feature
@@ -32,6 +37,14 @@ Volume control allows to tweack texture at runtime to achive desiared light visu
 Work with 3D
 
 ![_cover](https://github.com/NullTale/VolFx/assets/1497430/58f6af02-83ae-4b1a-9f3c-9d995229c02f)
+
+[AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928) base effects
+
+![_cover](https://github.com/NullTale/VolFx/assets/1497430/13c87450-24a7-4d17-848c-692bd33486d2)
+
+Clip application with [ScreenFx](https://assetstore.unity.com/packages/tools/camera/screenfx-270814)
+
+![_ScreenFxCover](https://github.com/NullTale/VolFx/assets/1497430/cb89b908-ee2b-4716-ac14-3411968fe92e)
 
 Can have may instances, order of post effects can be configured as their options<br>
 
