@@ -20,7 +20,7 @@ Tested with 2022.2, 2023.2 Web
 * Volume control - all build in effects controlled via volume profile and linked to a layer mask, so scene processing can be easily made dynamic
 * Buffer system - can render object to a buffer texture to provide additional textures(like light maps, pattern animations, height etc) then process and use them later through a shader
 * Configurable pipeline - each effect can be reordered and configured depending on the application
-* Part of Artwork project - all effects from [PostArt](https://github.com/NullTale/PixelationFx) projects can be added as passes to VolFx without cluttering Volume or RenderFeature's list
+* Part of Artwork project - all effects from [PostArt](https://github.com/NullTale/PixelationFx) projects can be added as passes to VolFx without cluttering RenderFeature list
 
 ----------------------------------------- - - - - -  -  - <br>
 
@@ -46,7 +46,7 @@ Clip application with [ScreenFx](https://assetstore.unity.com/packages/tools/cam
 
 ![_ScreenFxCover](https://github.com/NullTale/VolFx/assets/1497430/cb89b908-ee2b-4716-ac14-3411968fe92e)
 
-Can have may instances, order of post effects can be configured as their options<br>
+Selective application and customizable effects sequence<br>
 
 ![_cover](https://github.com/NullTale/VolFx/assets/1497430/22b67d1c-80fd-4a24-8980-2b7e0bea6a79)<br>
 
