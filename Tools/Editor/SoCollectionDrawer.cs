@@ -68,7 +68,21 @@ namespace Buffers.Editor
         // =======================================================================
         private ReorderableList _getList(SerializedProperty property)
         {
-            if (m_List == null || m_List.list == null)
+            var bug = false;
+            try
+            {
+                if (m_List != null)
+                {
+                    if (m_List.count < 0)
+                        bug = true;
+                }
+            }
+            catch (Exception e)
+            {
+                bug = true;
+            }
+            
+            if (m_List == null || bug)
             {
                 var propertyList   = property.FindPropertyRelative("m_List");
                 var collectionType = propertyList.GetSerializedValue<object>().GetType().GetGenericArguments().First();
