@@ -176,3 +176,4 @@ Effects applied sequentially to a 3D object
 * [ImageFlow](https://github.com/NullTale/FlowFx)
 * [OldMovie](https://github.com/NullTale/OldMovieFx)
 * [GradientMap](https://github.com/NullTale/GradientMapFilter)
+* [Ascii](https://github.com/NullTale/AsciiFx)
