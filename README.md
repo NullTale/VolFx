@@ -5,8 +5,8 @@
 [![Forum](https://img.shields.io/badge/Forum-asd?logo=ChatBot&color=blue)](https://forum.unity.com/threads/1542860)
 [![Asset Store](https://img.shields.io/badge/Asset%20Store-asd?logo=Unity&color=red)](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
 
-VolFx is a customizable multi post-processing with buffer system for Unity Urp<br>
-that allows build a custom scene processing architecture for visual effects creation ✨
+VolFx is selective multi post-processing for Unity Urp<br>
+designed for visual effects creation ✨
 
 Tested with 2022.2, 2023.2 Web
 
@@ -16,11 +16,11 @@ Tested with 2022.2, 2023.2 Web
 
 ## Features
 * Custom passes - expandable, has minimal set of custom effects and generic blit feature
-* Targeting post processing - can be applied to scene objects by layer mask
+* Selective post processing - can be applied to scene objects by layer mask
+* Downlodable art effects - all effects from [PostArt](https://github.com/NullTale/PixelationFx) projects can be added as passes to VolFx without cluttering RenderFeature list
 * Volume control - all build in effects controlled via volume profile and linked to a layer mask, so scene processing can be easily made dynamic
 * Buffer system - can render object to a buffer texture to provide additional textures(like light maps, pattern animations, height etc) then process and use them later through a shader
 * Configurable pipeline - each effect can be reordered and configured depending on the application
-* Part of Artwork project - all effects from [PostArt](https://github.com/NullTale/PixelationFx) projects can be added as passes to VolFx without cluttering RenderFeature list
 
 ----------------------------------------- - - - - -  -  - <br>
 
@@ -58,13 +58,13 @@ https://github.com/NullTale/VolFx.git
 
 ---
 
-Add `VolFx` feature to UrpRenderer add post-process passes to it, control via volume profile <br>
+Add `VolFxProc` feature to UrpRenderer add post-process passes to it, control via volume profile <br>
 
 ![_Urp](https://github.com/NullTale/VolFx/assets/1497430/21dda2ff-c82e-4d46-8335-d542fc53428c) <br>
 <sup>* optionally configure the render event, source with output and volume mask</sup>
 
-`VolBuffers` feature can be used to collect specific object to a texture to provide some vfx texture source<br>
-that can be post processed at runtime and used later throug a shader
+`VolFxBuffers` feature can be used to collect specific object to a texture to provide some texture source<br>
+that can be post processed at runtime and used later throug a shader for effects or what ever
 
 ![image](https://github.com/NullTale/VolFx/assets/1497430/9288c212-c6c2-486b-b699-940eacc11a53)
 
@@ -92,12 +92,12 @@ Basically extended remplementation of moust popular effect to process the images
 ![Bloom](https://github.com/NullTale/VolFx/assets/1497430/12475cb3-ab40-4e89-a3ac-6730155ed075)
 
 #### Blur
-Just simple Blur with radial and distortion options
+Blur with radial and distortion options
 
 ![Blur](https://github.com/NullTale/VolFx/assets/1497430/28b6a7ab-1eae-4053-8088-99a20cc9a6b3)
 
 #### Mask
-Post processing Soft mask from scene objects with alpha support
+Post processing Soft mask from scene objects with alpha blending
 
 ![_mask](https://github.com/NullTale/VolFx/assets/1497430/c0f1ac92-03f2-485a-a8c0-308af901af29)
 
@@ -109,12 +109,12 @@ There is an example of simple grayscale effect that can be found in `Project Sam
 
 ![_cover](https://github.com/NullTale/VolFx/assets/1497430/9670cfd8-563e-4283-bb9f-b4c221242bd1)
 
-All effect must be inherated from `VolFx.Pass` and then added to a `VolFxRenderFeature` <br>
+All effect must be inherated from `VolFxProc.Pass` and then added to a `VolFxRenderFeature` <br>
 Material creates automatically using `ShaderName` attribute, `VolumeSettings` implemented using [Unity API](https://docs.unity3d.com/Packages/com.unity.render-pipelines.core@7.1/api/UnityEngine.Rendering.VolumeComponent.html)
 
 ```C#
 [ShaderName("Hidden/VolFx/Grayscale")] // shader name for pass material
-public class GrayscalePass : VolFx.Pass
+public class GrayscalePass : VolFxProc.Pass
 {
     // =======================================================================
     public override bool Validate(Material mat)
