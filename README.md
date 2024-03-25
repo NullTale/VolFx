@@ -96,6 +96,13 @@ Just simple Blur with radial and distortion options
 
 ![Blur](https://github.com/NullTale/VolFx/assets/1497430/28b6a7ab-1eae-4053-8088-99a20cc9a6b3)
 
+#### Mask
+Post processing Soft mask from scene objects with alpha support
+
+![_mask](https://github.com/NullTale/VolFx/assets/1497430/c0f1ac92-03f2-485a-a8c0-308af901af29)
+
+
+
 ## Custom Effect
 
 There is an example of simple grayscale effect that can be found in `Project Samples`
