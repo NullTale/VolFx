@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 //  VolFx © NullTale - https://twitter.com/NullTale/
-namespace Buffers
+namespace VolFx.Tools
 {
     [AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
     public class SocFormatAttribute : PropertyAttribute

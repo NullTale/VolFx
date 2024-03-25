@@ -5,11 +5,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using Buffer = VolFx.Tools.Buffer;
 
 //  VolFx © NullTale - https://twitter.com/NullTale/
 namespace VolFx
 {
-    public class VolFx : ScriptableRendererFeature
+    public class VolFxProc : ScriptableRendererFeature
     {
         private static List<ShaderTagId> k_ShaderTags;
         
@@ -17,7 +18,7 @@ namespace VolFx
         public RenderPassEvent               _event  = RenderPassEvent.BeforeRenderingPostProcessing;
         [Tooltip("If not set camera format will be used(usually it looses alpha and can't be used as overlay)")]
         public Optional<RenderTextureFormat> _format = new Optional<RenderTextureFormat>(RenderTextureFormat.ARGB32, true);
-        [Tooltip("Volume Settings Mask, also used as RenderFilter if Source option is set to the LayerMask mode")]
+        [Tooltip("Volume Settings Mask")]
         public Optional<LayerMask>           _volumeMask = new Optional<LayerMask>(false);
         [Tooltip("Post processing source")]
         public SourceOptions                 _source = new SourceOptions();
@@ -33,7 +34,14 @@ namespace VolFx
 
         [NonSerialized]
         public PassExecution _execution;
-
+        
+        /// <summary>
+        /// Initial input
+        /// </summary>
+        protected RTHandle Source { get; set;}
+        /// <summary>
+        /// Volume stack settings
+        /// </summary>
         public VolumeStack Stack
         {
             get
@@ -56,7 +64,9 @@ namespace VolFx
             [Tooltip("Render Texture to process")]
             public RenderTexture  _renderTex;
             [Tooltip("Buffer to process")]
-            public Buffers.Buffer _buffer;
+            public Tools.Buffer _buffer;
+            [Tooltip("To which objects to apply post-processing")]
+            public LayerMask      _render;
             [Tooltip("Where to draw the result")]
             public MaskOutput     _output;
             [Tooltip("Also draw post process result in the camera view")]
@@ -84,7 +94,7 @@ namespace VolFx
         public abstract class Pass : ScriptableObject
         {
             [NonSerialized]
-            public VolFx               _owner;
+            public VolFxProc           _owner;
             [SerializeField]
             internal  bool             _active = true;
             [SerializeField] [HideInInspector]
@@ -92,8 +102,10 @@ namespace VolFx
             protected Material         _material;
             private   bool             _isActive;
             
-            protected         VolumeStack Stack  => _owner.Stack;
-            protected virtual bool        Invert => false;
+            protected         RTHandle    Source  => _owner.Source;
+            protected         VolumeStack Stack   => _owner.Stack;
+            protected virtual bool        Invert  => false;
+            protected virtual int         MatPass => 0;
 
             // =======================================================================
             internal bool IsActive
@@ -136,7 +148,7 @@ namespace VolFx
             /// </summary>
             public virtual void Invoke(CommandBuffer cmd, RTHandle source, RTHandle dest, ScriptableRenderContext context, ref RenderingData renderingData)
             {
-                Utils.Blit(cmd, source, dest, _material, 0, Invert);
+                Utils.Blit(cmd, source, dest, _material, MatPass, Invert);
             }
 
             public void Validate()
@@ -197,10 +209,10 @@ namespace VolFx
             {
             }
         }
-
+        
         public class PassExecution : ScriptableRenderPass
         {
-            public   VolFx              _owner;
+            public   VolFxProc          _owner;
             internal RenderTargetFlip   _renderTarget;
             private  Pass[]             _passes;
             internal VolumeStack        _stack;
@@ -218,7 +230,7 @@ namespace VolFx
                 _renderTarget = new RenderTargetFlip(nameof(_renderTarget));
                
                 _output    = new RenderTarget().Allocate(_owner._source._source == SourceOptions.Source.LayerMask && _owner._source._output == SourceOptions.MaskOutput.Texture ? _owner._source._outputTex : "rt_out");
-                _rlp       = new RendererListParams(new CullingResults(), new DrawingSettings(), new FilteringSettings(RenderQueueRange.all, _owner._volumeMask.GetValueOrDefault().value));
+                _rlp       = new RendererListParams(new CullingResults(), new DrawingSettings(), new FilteringSettings(RenderQueueRange.all, _owner._source._render.value));
                 
                 _profiler  = new ProfilingSampler(_owner.name);
             }
@@ -228,16 +240,24 @@ namespace VolFx
                 if (_owner._volumeMask.Enabled && _stack != null)
                     VolumeManager.instance.Update(_stack, null, _owner._volumeMask.Value);
             
+                // command buffer and validation
+                var cmd = CommandBufferPool.Get(_owner.name);
+                ref var cameraData = ref renderingData.cameraData;
+                _owner.Source = _getSourceTex(ref renderingData);
+                
                 foreach (var pass in _owner._passes.Values.Where(n => n != null))
                     pass.Validate();
                 
                 _passes = _owner._passes.Values.Where(n => n != null && n.IsActive).ToArray();
+                
                 if (_passes.Length == 0 && _isDrawler() == false)
+                {
+                    cmd.Clear();
+                    CommandBufferPool.Release(cmd);
                     return;
+                }
                 
                 // allocate stuff
-                var cmd = CommandBufferPool.Get(_owner.name);
-                ref var cameraData = ref renderingData.cameraData;
                 ref var desc = ref cameraData.cameraTargetDescriptor;
                 if (_owner._format.Enabled)
                     desc.colorFormat = _owner._format.Value;
@@ -251,7 +271,7 @@ namespace VolFx
                     return; 
                 }
 #endif
-                var source = _getSourceTex(ref renderingData);
+                var source = _owner.Source;
                 var output = _getOutputTex(ref renderingData);
                 cmd.SetViewProjectionMatrices(Matrix4x4.identity, Matrix4x4.identity);
                 
@@ -421,7 +441,7 @@ namespace VolFx
                 pass._owner = this;
                 pass._init();
             }
-            
+
             if (k_ShaderTags == null)
             {
                 k_ShaderTags = new List<ShaderTagId>(new[]

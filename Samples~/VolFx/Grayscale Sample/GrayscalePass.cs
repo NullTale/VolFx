@@ -3,7 +3,7 @@ using UnityEngine;
 namespace VolFx
 {
     [ShaderName("Hidden/VolFx/Grayscale")] // shader name for pass material
-    public class GrayscalePass : VolFx.Pass
+    public class GrayscalePass : VolFxProc.Pass
     {
         // =======================================================================
         public override bool Validate(Material mat)

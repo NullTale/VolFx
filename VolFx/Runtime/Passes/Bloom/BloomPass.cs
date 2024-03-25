@@ -8,7 +8,7 @@ using UnityEngine.Rendering.Universal;
 namespace VolFx
 {
     [ShaderName("Hidden/VolFx/Bloom")]
-    public class BloomPass : VolFx.Pass
+    public class BloomPass : VolFxProc.Pass
     {
         private static readonly int s_ValueTex  = Shader.PropertyToID("_ValueTex");
         private static readonly int s_ColorTex  = Shader.PropertyToID("_ColorTex");

@@ -8,10 +8,10 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 //  VolFx © NullTale - https://twitter.com/NullTale/
-namespace Buffers
+namespace VolFx.Tools
 {
-    [DisallowMultipleRendererFeature("Vol Buffers")]
-    public class VolBuffers : ScriptableRendererFeature
+    [DisallowMultipleRendererFeature("VolFx Buffers")]
+    public class VolFxBuffers : ScriptableRendererFeature
     {
         private static List<ShaderTagId> k_ShaderTags;
 
@@ -50,7 +50,7 @@ namespace Buffers
                     return;
 #endif
                 // allocate resources
-                var cmd  = CommandBufferPool.Get(nameof(VolBuffers));
+                var cmd  = CommandBufferPool.Get(nameof(VolFxBuffers));
                 var desc = renderingData.cameraData.cameraTargetDescriptor;
                 
                 desc.depthStencilFormat = _buffer._depth switch
@@ -181,8 +181,8 @@ namespace Buffers
 
         public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
         {
-            // in game or scene view only (ignore inspector draw)
-            if (renderingData.cameraData.cameraType != CameraType.Game && renderingData.cameraData.cameraType != CameraType.SceneView)
+            // in game view only (ignore inspector draw)
+            if (renderingData.cameraData.cameraType != CameraType.Game)
                 return;
             
             foreach (var pass in _bufferPasses)

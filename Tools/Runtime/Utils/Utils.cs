@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 using Random = UnityEngine.Random;
 
 //  VolFx © NullTale - https://twitter.com/NullTale/
-namespace Buffers
+namespace VolFx.Tools
 {
     public static class Utils
     {

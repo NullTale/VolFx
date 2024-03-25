@@ -1,7 +1,7 @@
 using UnityEngine;
 
 //  VolFx © NullTale - https://twitter.com/NullTale/
-namespace Buffers
+namespace VolFx.Tools
 {
     [ExecuteAlways]
     public class InBuffer : MonoBehaviour

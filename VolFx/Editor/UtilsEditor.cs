@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEditor;
+using UnityEditor.Callbacks;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -33,6 +34,43 @@ namespace VolFx
         }
         
         // =======================================================================
+        [DidReloadScripts]
+        public static void CheckDefine()
+        {
+            if (InPackage())
+                return;
+            
+            AddCompileDefine("VOL_FX");
+        }
+        
+        public static bool InPackage()
+        {
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            var packageInfo = UnityEditor.PackageManager.PackageInfo.FindForAssembly(assembly);
+            return packageInfo != null;
+        }
+        
+        public static void AddCompileDefine(string def)
+	    {
+		    var tg = new [] { BuildTargetGroup.WebGL, BuildTargetGroup.Standalone, BuildTargetGroup.Android };
+
+		    foreach (var grp in tg)
+		    {
+			    if (grp == BuildTargetGroup.Unknown)        //the unknown group does not have any constants location
+				    continue;
+
+			    string defines = PlayerSettings.GetScriptingDefineSymbolsForGroup(grp);
+			    if (!defines.Contains(def))
+			    {
+				    if (defines.Length > 0)         //if the list is empty, we don't need to append a semicolon first
+					    defines += ";";
+
+				    defines += def;
+				    PlayerSettings.SetScriptingDefineSymbolsForGroup(grp, defines);
+			    }
+		    }
+	    }
+        
         public static Rect Label(this Rect rect)
         {
             return new Rect(rect.x, rect.y, EditorGUIUtility.labelWidth, EditorGUIUtility.singleLineHeight);

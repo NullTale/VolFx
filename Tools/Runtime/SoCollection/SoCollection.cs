@@ -6,7 +6,7 @@ using UnityEngine;
 using Object = UnityEngine.Object;
 
 //  VolFx © NullTale - https://twitter.com/NullTale/
-namespace Buffers
+namespace VolFx.Tools
 {
     [Serializable]
     public class SoCollection<T> : IReadOnlyDictionary<string, T>, IList<T>

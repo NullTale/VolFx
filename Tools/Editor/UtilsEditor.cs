@@ -7,7 +7,7 @@ using UnityEngine;
 using Object = UnityEngine.Object;
 
 //  VolFx © NullTale - https://twitter.com/NullTale/
-namespace Buffers.Editor
+namespace VolFx.Tools.Editor
 {
     internal static class UtilsEditor
     {

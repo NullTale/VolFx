@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 
 //  VolFx © NullTale - https://twitter.com/NullTale/
-namespace Buffers
+namespace VolFx.Tools
 {
     public class RenderTarget
     {

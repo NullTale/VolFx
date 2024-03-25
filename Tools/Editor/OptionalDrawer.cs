@@ -3,7 +3,7 @@ using UnityEditorInternal;
 using UnityEngine;
 
 //  VolFx © NullTale - https://twitter.com/NullTale/
-namespace Buffers.Editor
+namespace VolFx.Tools.Editor
 {
     [CustomPropertyDrawer(typeof(Optional<>))]
     public class OptionalDrawer : PropertyDrawer

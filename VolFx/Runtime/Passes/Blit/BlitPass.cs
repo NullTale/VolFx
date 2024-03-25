@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 //  VolFx © NullTale - https://twitter.com/NullTale/
 namespace VolFx
 {
-    public class BlitPass : VolFx.Pass
+    public class BlitPass : VolFxProc.Pass
     {
         [SerializeField] [Tooltip("Used if need to gain the access to the pass in editor")]
         internal  bool       _showInInspector;

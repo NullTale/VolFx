@@ -1,7 +1,7 @@
 {
   "name": "www.nulltale.volfx",
   "displayName": "VolFx",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "unity": "2022.1",
   "description": "VFX Toolkit ☄ selective post-processing with buffer system",
   "documentationUrl": "https://forum.unity.com/threads/1542860",
@@ -11,9 +11,7 @@
     "url": "https://github.com/NullTale"
   },
   "dependencies": {
-    "com.unity.cinemachine": "2.8.9",
-    "com.unity.render-pipelines.universal": "14.0.6",
-    "com.unity.timeline": "1.6.5"
+    "com.unity.render-pipelines.universal": "14.0.6"
   },
   "hideInEditor": false
 }

@@ -31,7 +31,7 @@ MonoBehaviour:
   active: 0
   m_Radius:
     m_OverrideState: 1
-    m_Value: 0.014
+    m_Value: 0.027
   m_Radial:
     m_OverrideState: 1
     m_Value: 0.164
@@ -192,6 +192,22 @@ MonoBehaviour:
   m_Flicker:
     m_OverrideState: 0
     m_Value: 0
+--- !u!114 &-123122453809090002
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bfbb06e13699f4fb9caf74d92cae3d, type: 3}
+  m_Name: GrayscaleVol
+  m_EditorClassIdentifier: 
+  active: 0
+  m_Weight:
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,9 +223,28 @@ MonoBehaviour:
   components:
   - {fileID: -5912157193952213507}
   - {fileID: 5983101876436631800}
-  - {fileID: 6259273639873019888}
   - {fileID: -1717772295300736383}
-  - {fileID: 1945200922527785743}
+  - {fileID: -123122453809090002}
+  - {fileID: 21699910979967865}
+--- !u!114 &21699910979967865
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 310ff0a41f6a46cba06a0c6985ead2d5, type: 3}
+  m_Name: MaskVol
+  m_EditorClassIdentifier: 
+  active: 0
+  m_Weight:
+    m_OverrideState: 1
+    m_Value: 1
+  m_Mask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
 --- !u!114 &1945200922527785743
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -317,88 +352,3 @@ MonoBehaviour:
   m_Alpha:
     m_OverrideState: 1
     m_Value: 0
---- !u!114 &6259273639873019888
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b91e6b88eb6f44219bab6579d872285e, type: 3}
-  m_Name: GradientMapVol
-  m_EditorClassIdentifier: 
-  active: 0
-  m_Weight:
-    m_OverrideState: 1
-    m_Value: 1
-  m_Gradient:
-    m_OverrideState: 1
-    m_Value:
-      _grad:
-        serializedVersion: 2
-        key0: {r: 0, g: 0.07526225, b: 0.4056604, a: 1}
-        key1: {r: 1, g: 0.414717, b: 0.33490568, a: 1}
-        key2: {r: 1, g: 1, b: 1, a: 0}
-        key3: {r: 1, g: 1, b: 1, a: 0}
-        key4: {r: 1, g: 1, b: 1, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
-        key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 4626
-        ctime1: 48959
-        ctime2: 59174
-        ctime3: 65535
-        ctime4: 65535
-        ctime5: 0
-        ctime6: 0
-        ctime7: 0
-        atime0: 0
-        atime1: 65535
-        atime2: 65535
-        atime3: 0
-        atime4: 0
-        atime5: 0
-        atime6: 0
-        atime7: 0
-        m_Mode: 0
-        m_ColorSpace: 0
-        m_NumColorKeys: 3
-        m_NumAlphaKeys: 2
-      _pixels:
-      - {r: 0, g: 0.07526225, b: 0.4056604, a: 1}
-      - {r: 0, g: 0.07526225, b: 0.4056604, a: 1}
-      - {r: 0, g: 0.07526225, b: 0.4056604, a: 1}
-      - {r: 0.03870924, g: 0.088402286, b: 0.40292153, a: 1}
-      - {r: 0.08639453, g: 0.10458928, b: 0.39954758, a: 1}
-      - {r: 0.13407983, g: 0.12077628, b: 0.39617363, a: 1}
-      - {r: 0.18176512, g: 0.13696328, b: 0.39279965, a: 1}
-      - {r: 0.22945042, g: 0.15315029, b: 0.3894257, a: 1}
-      - {r: 0.27713573, g: 0.16933729, b: 0.38605174, a: 1}
-      - {r: 0.324821, g: 0.18552428, b: 0.38267776, a: 1}
-      - {r: 0.37250632, g: 0.20171128, b: 0.3793038, a: 1}
-      - {r: 0.4201916, g: 0.21789828, b: 0.37592986, a: 1}
-      - {r: 0.4678769, g: 0.23408528, b: 0.3725559, a: 1}
-      - {r: 0.5155622, g: 0.25027227, b: 0.36918193, a: 1}
-      - {r: 0.5632475, g: 0.2664593, b: 0.36580798, a: 1}
-      - {r: 0.61093277, g: 0.28264627, b: 0.36243403, a: 1}
-      - {r: 0.6586181, g: 0.29883328, b: 0.35906005, a: 1}
-      - {r: 0.7063035, g: 0.31502032, b: 0.3556861, a: 1}
-      - {r: 0.7539886, g: 0.33120728, b: 0.35231215, a: 1}
-      - {r: 0.801674, g: 0.3473943, b: 0.34893817, a: 1}
-      - {r: 0.8493593, g: 0.36358127, b: 0.34556422, a: 1}
-      - {r: 0.89704466, g: 0.3797683, b: 0.34219027, a: 1}
-      - {r: 0.9447298, g: 0.39595526, b: 0.33881631, a: 1}
-      - {r: 0.9924152, g: 0.41214228, b: 0.33544233, a: 1}
-      - {r: 1, g: 0.51657706, b: 0.45065576, a: 1}
-      - {r: 1, g: 0.6377037, b: 0.5882997, a: 1}
-      - {r: 1, g: 0.75882995, b: 0.7259431, a: 1}
-      - {r: 1, g: 0.8799566, b: 0.8635871, a: 1}
-      - {r: 1, g: 1, b: 1, a: 1}
-      - {r: 1, g: 1, b: 1, a: 1}
-      - {r: 1, g: 1, b: 1, a: 1}
-      - {r: 1, g: 1, b: 1, a: 1}
-  m_Mask:
-    m_OverrideState: 1
-    m_Value: {x: 0, y: 1}

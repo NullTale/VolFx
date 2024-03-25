@@ -1,9 +1,8 @@
 using UnityEditor;
 using UnityEngine;
-using VolFx;
 
 //  VolFx © NullTale - https://twitter.com/NullTale/
-namespace Buffers.Editor
+namespace VolFx.Tools.Editor
 {
     [CustomPropertyDrawer(typeof(RangeFloat))]
     public class RangeFloatDrawer : PropertyDrawer

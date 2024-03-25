@@ -141,6 +141,22 @@ MonoBehaviour:
     m_RotationOrder: 4
   _flickerPeriod: 7
   _bloomOnly: 0
+--- !u!114 &-5679207681965389611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f61da571db4a6b499443747826c2c3e, type: 3}
+  m_Name: VolBuffers
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  _list:
+    m_List:
+    - {fileID: 3933885310180405072}
 --- !u!114 &-5518495550892900404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +184,9 @@ MonoBehaviour:
     _sourceTex: _inputTex
     _renderTex: {fileID: 0}
     _buffer: {fileID: 0}
+    _render:
+      serializedVersion: 2
+      m_Bits: 2
     _output: 0
     _screenOutput: 0
     _outputTex: _outputTex
@@ -177,7 +196,25 @@ MonoBehaviour:
     - {fileID: -2284487352314097947}
     - {fileID: 5524222000072214962}
     - {fileID: 4256994242976719988}
+    - {fileID: 165970556945247959}
   _blitShader: {fileID: 4800000, guid: a8a709d9db2241741ab3032b946ef258, type: 3}
+--- !u!114 &-5290580108322713347
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d855550e46694270a49d1d1d670f411c, type: 3}
+  m_Name: Mask
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: 428ef3a835824a688c5b1034981fecf9, type: 3}
+  _mode: 0
+  _persistent: 1
+  _mask: {fileID: 3933885310180405072}
 --- !u!114 &-5162448555770623346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +231,20 @@ MonoBehaviour:
   _shader: {fileID: 0}
   _material: {fileID: 0}
   _isActive: 0
+--- !u!114 &-4056397058407405573
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff530a28ee2942c429ac8879889d8215, type: 3}
+  m_Name: Grayscale
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: fc78cc8bb01197248b8a758ee38592b9, type: 3}
 --- !u!114 &-2951693333816784631
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -405,6 +456,9 @@ MonoBehaviour:
     _sourceTex: _inputTex
     _renderTex: {fileID: 0}
     _buffer: {fileID: 0}
+    _render:
+      serializedVersion: 2
+      m_Bits: 16
     _output: 0
     _screenOutput: 0
     _outputTex: _outputTex
@@ -414,6 +468,7 @@ MonoBehaviour:
     - {fileID: -1406121207157098977}
     - {fileID: -2477344552549714263}
     - {fileID: -7363158787886000641}
+    - {fileID: 6107142286303671272}
   _blitShader: {fileID: 4800000, guid: a8a709d9db2241741ab3032b946ef258, type: 3}
 --- !u!114 &-1406121207157098977
 MonoBehaviour:
@@ -555,6 +610,9 @@ MonoBehaviour:
     _sourceTex: _inputTex
     _renderTex: {fileID: 0}
     _buffer: {fileID: 0}
+    _render:
+      serializedVersion: 2
+      m_Bits: 32
     _output: 0
     _screenOutput: 0
     _outputTex: _outputTex
@@ -564,6 +622,7 @@ MonoBehaviour:
     - {fileID: 7295209022824667507}
     - {fileID: -6243154567683193310}
     - {fileID: 5000648122537518632}
+    - {fileID: 6334677604939990690}
   _blitShader: {fileID: 4800000, guid: a8a709d9db2241741ab3032b946ef258, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -585,7 +644,8 @@ MonoBehaviour:
   - {fileID: -1567537954651103883}
   - {fileID: -5518495550892900404}
   - {fileID: -136818791313127845}
-  m_RendererFeatureMap: 45e7105452dc8032751d141189fc3eeacc7f74e2885d6ab35bc62ec108ec19fe
+  - {fileID: -5679207681965389611}
+  m_RendererFeatureMap: 45e7105452dc8032751d141189fc3eeacc7f74e2885d6ab35bc62ec108ec19fed588c8f6b3662fb1
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -624,6 +684,20 @@ MonoBehaviour:
   m_CopyDepthMode: 1
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &165970556945247959
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff530a28ee2942c429ac8879889d8215, type: 3}
+  m_Name: Grayscale
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: fc78cc8bb01197248b8a758ee38592b9, type: 3}
 --- !u!114 &2839286635806888873
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -726,6 +800,9 @@ MonoBehaviour:
     _sourceTex: _inputTex
     _renderTex: {fileID: 0}
     _buffer: {fileID: 0}
+    _render:
+      serializedVersion: 2
+      m_Bits: 0
     _output: 0
     _screenOutput: 0
     _outputTex: _outputTex
@@ -735,8 +812,37 @@ MonoBehaviour:
     - {fileID: 2839286635806888873}
     - {fileID: 4974457428459928799}
     - {fileID: 6412858531213722307}
-    - {fileID: 7958142798369264448}
+    - {fileID: -4056397058407405573}
+    - {fileID: -5290580108322713347}
   _blitShader: {fileID: 4800000, guid: a8a709d9db2241741ab3032b946ef258, type: 3}
+--- !u!114 &3933885310180405072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ddeaca17642439aa7440ce212d54a04, type: 3}
+  m_Name: Mask
+  m_EditorClassIdentifier: 
+  _event: 250
+  _mask:
+    enabled: 1
+    value:
+      serializedVersion: 2
+      m_Bits: 4
+  _clear:
+    enabled: 1
+    value: {r: 0, g: 0, b: 0, a: 0}
+  _globalTex:
+    enabled: 1
+    value: _MaskTex
+  _format:
+    enabled: 1
+    value: 0
+  _depth: 1
 --- !u!114 &3999552821942770099
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -965,6 +1071,34 @@ MonoBehaviour:
   - 0.019586023
   - 0.0077324267
   - 0.003236246
+--- !u!114 &6107142286303671272
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff530a28ee2942c429ac8879889d8215, type: 3}
+  m_Name: Grayscale
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: fc78cc8bb01197248b8a758ee38592b9, type: 3}
+--- !u!114 &6334677604939990690
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff530a28ee2942c429ac8879889d8215, type: 3}
+  m_Name: Grayscale
+  m_EditorClassIdentifier: 
+  _active: 1
+  _shader: {fileID: 4800000, guid: fc78cc8bb01197248b8a758ee38592b9, type: 3}
 --- !u!114 &6412858531213722307
 MonoBehaviour:
   m_ObjectHideFlags: 3

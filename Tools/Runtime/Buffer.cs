@@ -2,11 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 //  VolFx © NullTale - https://twitter.com/NullTale/
-namespace Buffers
+namespace VolFx.Tools
 {
     public class Buffer : ScriptableObject
     {
@@ -54,7 +53,7 @@ namespace Buffers
             if (Application.isPlaying)
                 return;
             
-            var lrf =UnityEditor.AssetDatabase.LoadAllAssetsAtPath(UnityEditor.AssetDatabase.GetAssetPath(this)).OfType<VolBuffers>().FirstOrDefault(n => n._list.Contains(this));
+            var lrf =UnityEditor.AssetDatabase.LoadAllAssetsAtPath(UnityEditor.AssetDatabase.GetAssetPath(this)).OfType<VolFxBuffers>().FirstOrDefault(n => n._list.Contains(this));
             if (lrf != null)
                 lrf.Create();
 #endif

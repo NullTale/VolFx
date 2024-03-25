@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94e4d16c32d4354919ca310e9b07591, type: 3}
   m_Name: AdjustmentsVol
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_Tint:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}

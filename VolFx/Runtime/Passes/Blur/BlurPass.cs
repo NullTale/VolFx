@@ -6,7 +6,7 @@ using UnityEngine;
 namespace VolFx
 {
     [ShaderName("Hidden/VolFx/Blur")]
-    public class BlurPass : VolFx.Pass
+    public class BlurPass : VolFxProc.Pass
     {
         private static readonly int s_Directions = Shader.PropertyToID("_Directions");
         private static readonly int s_Step       = Shader.PropertyToID("_Step");

@@ -4,7 +4,7 @@ using UnityEngine;
 namespace VolFx
 {
     [ShaderName("Hidden/VolFx/Adjustments")]
-    public class AdjustmentsPass : VolFx.Pass
+    public class AdjustmentsPass : VolFxProc.Pass
     {
         private static readonly int s_Contrast   = Shader.PropertyToID("_Contrast");
         private static readonly int s_Hue        = Shader.PropertyToID("_Hue");
