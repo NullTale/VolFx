@@ -6,7 +6,7 @@ using Buffer = VolFx.Tools.Buffer;
 //  VolFx © NullTale - https://twitter.com/NullTale/
 namespace VolFx
 {
-    //[Serializable, VolumeComponentMenu("VolFx/Mask")]
+    [Serializable, VolumeComponentMenu("VolFx/Mask")]
     public sealed class MaskVol : VolumeComponent, IPostProcessComponent
     {
         public ClampedFloatParameter m_Weight = new ClampedFloatParameter(1, 0, 1);
