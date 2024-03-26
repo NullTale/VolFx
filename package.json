@@ -13,5 +13,12 @@
   "dependencies": {
     "com.unity.render-pipelines.universal": "14.0.6"
   },
-  "hideInEditor": false
+  "hideInEditor": false,
+  "samples": [
+      {
+          "displayName": "Sample Scene",
+          "description": "",
+          "path": "Samples~"
+      }
+    ]
 }
