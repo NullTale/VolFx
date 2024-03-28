@@ -150,7 +150,6 @@ MonoBehaviour:
   components:
   - {fileID: 3998835214029908321}
   - {fileID: 5787311479476393539}
-  - {fileID: -1538443333369472905}
 --- !u!114 &3998835214029908321
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -163,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94e4d16c32d4354919ca310e9b07591, type: 3}
   m_Name: AdjustmentsVol
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_Tint:
     m_OverrideState: 1
     m_Value: {r: 0.7028302, g: 0.83384037, b: 1, a: 1}
@@ -254,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318746fcd28a4c69b04bd76bb679e99e, type: 3}
   m_Name: BloomVol
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_Intencity:
     m_OverrideState: 1
     m_Value: 7.73

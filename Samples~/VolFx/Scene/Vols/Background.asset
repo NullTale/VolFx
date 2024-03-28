@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318746fcd28a4c69b04bd76bb679e99e, type: 3}
   m_Name: BloomVol
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_Intencity:
     m_OverrideState: 1
     m_Value: 2.37
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87d2427ed3459e8c4345aacc689427, type: 3}
   m_Name: BlurVol
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_Radius:
     m_OverrideState: 1
     m_Value: 0
