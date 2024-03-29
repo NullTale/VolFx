@@ -465,8 +465,9 @@ namespace VolFx
 
         public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
         {
-            if (renderingData.cameraData.cameraType != CameraType.Game)
+            if (renderingData.cameraData.cameraType != CameraType.Game && (Application.isPlaying == false && renderingData.cameraData.cameraType != CameraType.SceneView))
                 return;
+            
 #if UNITY_EDITOR
             if (_blit == null)
                 _blit = new Material(_blitShader);
