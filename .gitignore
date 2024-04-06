@@ -11,3 +11,5 @@ VolFx/Runtime/Passes/Ext
 VolFx/Runtime/Passes/Ext.meta
 VolFx/Runtime/Passes/Add
 VolFx/Runtime/Passes/Add.meta
+package.json
+package.json.meta
