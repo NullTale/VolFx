@@ -1,9 +1,9 @@
 {
   "name": "www.nulltale.volfx",
   "displayName": "VolFx",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "unity": "2022.1",
-  "description": "VFX Toolkit ☄ selective post-processing with buffer system",
+  "description": "VFX Core ☄ selective post-processing with buffer system",
   "documentationUrl": "https://forum.unity.com/threads/1542860",
   "author": {
     "name": "NullTale",
