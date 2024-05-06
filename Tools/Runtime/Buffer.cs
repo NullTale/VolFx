@@ -15,12 +15,12 @@ namespace VolFx.Tools
         public Optional<LayerMask>           _mask  = new Optional<LayerMask>(true);
         [Tooltip("Clear color, if not set, cleaning will not be performed")]
         public Optional<Color>               _clear = new Optional<Color>(new Color(1, 1, 1, 0), true);
+        [Tooltip("Depth source texture")]
+        public DepthStencil                  _depth = DepthStencil.Clean;
         [Tooltip("Global texture name, if not set, the Layer Name will be used as global texture name")]
         public Optional<string>              _globalTex = new Optional<string>("_globaTex", false);
         [Tooltip("Output format")] [HideInInspector]
         public Optional<RenderTextureFormat> _format = new Optional<RenderTextureFormat>(RenderTextureFormat.ARGB32, true);
-        [Tooltip("Depth stencil behaviour")]  [HideInInspector]
-        public DepthStencil                  _depth = DepthStencil.Camera;
         
         [NonSerialized] 
         public List<Renderer>                _list       = new List<Renderer>();
@@ -38,12 +38,9 @@ namespace VolFx.Tools
         public enum DepthStencil
         {
             None,
+            Copy,
             Camera,
-            CameraReadOnly,
-            D16S8,
-            D24S8,
-            D16,
-            D24
+            Clean
         }
         
         // =======================================================================

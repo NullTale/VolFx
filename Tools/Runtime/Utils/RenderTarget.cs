@@ -30,6 +30,11 @@ namespace VolFx.Tools
             _allocated = true;
             cmd.GetTemporaryRT(Id, desc);
         }
+        public void Get(CommandBuffer cmd, in RenderTextureDescriptor desc, FilterMode mode)
+        {
+            _allocated = true;
+            cmd.GetTemporaryRT(Id, desc, mode);
+        }
 
         public void Release(CommandBuffer cmd)
         {

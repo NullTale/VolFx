@@ -90,6 +90,12 @@ namespace VolFx.Tools
             }
         }
         
+        public static void Blit(CommandBuffer cmd, RTHandle destination, Material material, int pass = 0, bool invert = false, int mip = 0)
+        {
+            cmd.SetRenderTarget(destination, mip);
+            cmd.DrawMesh(FullscreenMesh, invert ? s_IndentityInvert : Matrix4x4.identity, material, 0, pass);
+        }
+        
         public static void Blit(CommandBuffer cmd, RTHandle source, RTHandle destination, Material material, int pass = 0, bool invert = false, int mip = 0)
         {
             cmd.SetGlobalTexture(s_MainTexId, source);
