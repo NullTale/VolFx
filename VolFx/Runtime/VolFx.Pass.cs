@@ -398,7 +398,8 @@ namespace VolFx
                 
                 bool _isDrawler()
                 {
-                    return _owner._source._source == SourceOptions.Source.LayerMask;
+                    return _owner._source._source == SourceOptions.Source.LayerMask
+                    || (_owner._source._source != SourceOptions.Source.Camera && _owner._source._screenOutput);
                 }
                 
                 RTHandle _getCameraOutput(ref RenderingData renderingData)
