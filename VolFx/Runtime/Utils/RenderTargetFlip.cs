@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-//  VolFx © NullTale - https://twitter.com/NullTale/
+//  VolFx © NullTale - https://x.com/NullTale
 namespace VolFx
 {
     public class RenderTargetFlip

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-//  VolFx © NullTale - https://twitter.com/NullTale/
+//  VolFx © NullTale - https://x.com/NullTale
 namespace VolFx
 {
     public class BlitPass : VolFxProc.Pass

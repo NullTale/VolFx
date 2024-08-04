@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-//  VolFx © NullTale - https://twitter.com/NullTale/
+//  VolFx © NullTale - https://x.com/NullTale
 namespace VolFx
 {
     public class RenderTarget
@@ -13,6 +13,7 @@ namespace VolFx
         // =======================================================================
         public RenderTarget Allocate(RenderTexture rt, string name)
         {
+            rt.name = name;
             Handle = RTHandles.Alloc(rt, name);
             Id     = Shader.PropertyToID(name);
             return this;

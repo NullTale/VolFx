@@ -4,7 +4,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using Buffer = VolFx.Tools.Buffer;
 
-//  VolFx © NullTale - https://twitter.com/NullTale/
+//  VolFx © NullTale - https://x.com/NullTale
 namespace VolFx
 {
     [ShaderName("Hidden/VolFx/Mask")]

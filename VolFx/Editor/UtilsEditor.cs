@@ -7,7 +7,7 @@ using UnityEditor.Callbacks;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-//  VolFx © NullTale - https://twitter.com/NullTale/
+//  VolFx © NullTale - https://x.com/NullTale
 namespace VolFx
 {
     internal static class UtilsEditor

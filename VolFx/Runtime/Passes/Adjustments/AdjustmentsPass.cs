@@ -1,10 +1,10 @@
 using UnityEngine;
 
-//  VolFx © NullTale - https://twitter.com/NullTale/
+//  VolFx © NullTale - https://x.com/NullTale
 namespace VolFx
 {
     [ShaderName("Hidden/VolFx/Adjustments")]
-    public class AdjustmentsPass : VolFxProc.Pass
+    public class AdjustmentsPass : VolFx.Pass
     {
         private static readonly int s_Contrast   = Shader.PropertyToID("_Contrast");
         private static readonly int s_Hue        = Shader.PropertyToID("_Hue");

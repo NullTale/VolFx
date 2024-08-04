@@ -1,3 +1,4 @@
+//  VolFx © NullTale - https://x.com/NullTale
 Shader "Hidden/VolFx/Blur"
 {
     Properties

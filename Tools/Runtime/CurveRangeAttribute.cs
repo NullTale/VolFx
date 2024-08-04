@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-//  VolFx © NullTale - https://twitter.com/NullTale/
+//  VolFx © NullTale - https://x.com/NullTale
 namespace VolFx.Tools
 {
     [AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
