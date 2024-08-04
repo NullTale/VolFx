@@ -5,12 +5,13 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Serialization;
 using Buffer = VolFx.Tools.Buffer;
 
-//  VolFx © NullTale - https://twitter.com/NullTale/
+//  VolFx © NullTale - https://x.com/NullTale
 namespace VolFx
 {
-    public class VolFxProc : ScriptableRendererFeature
+    public class VolFx : ScriptableRendererFeature
     {
         private static List<ShaderTagId> k_ShaderTags;
         
@@ -18,8 +19,9 @@ namespace VolFx
         public RenderPassEvent               _event  = RenderPassEvent.BeforeRenderingPostProcessing;
         [Tooltip("If not set camera format will be used(usually it looses alpha and can't be used as overlay)")]
         public Optional<RenderTextureFormat> _format = new Optional<RenderTextureFormat>(RenderTextureFormat.ARGB32, true);
-        [Tooltip("Volume Settings Mask")]
-        public Optional<LayerMask>           _volumeMask = new Optional<LayerMask>(false);
+        [FormerlySerializedAs("_volumeMask")]
+        [Tooltip("Layer mask for Volume Settings or draw source for LayerMask Source")]
+        public Optional<LayerMask>           _mask = new Optional<LayerMask>(false);
         [Tooltip("Post processing source")]
         public SourceOptions                 _source = new SourceOptions();
         [Tooltip("RenderPasses and his execution order")]
@@ -47,7 +49,7 @@ namespace VolFx
             get
             {
                 if (_execution._stack == null)
-                    _execution._stack = _volumeMask.Enabled ? VolumeManager.instance.CreateStack() : VolumeManager.instance.stack;
+                    _execution._stack = _mask.Enabled ? VolumeManager.instance.CreateStack() : VolumeManager.instance.stack;
                 
                 return _execution._stack;
             }
@@ -58,21 +60,21 @@ namespace VolFx
         public class SourceOptions
         {
             [Tooltip("Post processing source")]
-            public Source         _source;
+            public Source              _source;
             [Tooltip("Global Texture to process")]
-            public string         _sourceTex = "_inputTex";
+            public string              _sourceTex = "_inputTex";
             [Tooltip("Render Texture to process")]
-            public RenderTexture  _renderTex;
+            public RenderTexture       _renderTex;
             [Tooltip("Buffer to process")]
-            public Tools.Buffer _buffer;
-            [Tooltip("To which objects to apply post-processing")]
-            public LayerMask      _render;
+            public Tools.Buffer        _buffer;
+            [Tooltip("Objects to render, if not set will be used LayerMask form RenderFeature settings (mask override)")]
+            public Optional<LayerMask> _maskOverride = new Optional<LayerMask>(new LayerMask(), false);
             [Tooltip("Where to draw the result")]
-            public MaskOutput     _output;
+            public MaskOutput          _output;
             [Tooltip("Also draw post process result in the camera view")]
-            public bool           _screenOutput;
+            public bool                _screenOutput;
             [Tooltip("Name of the output texture")]
-            public string         _outputTex = "_outputTex";
+            public string              _outputTex = "_outputTex";
             
             public enum Source
             {
@@ -94,7 +96,7 @@ namespace VolFx
         public abstract class Pass : ScriptableObject
         {
             [NonSerialized]
-            public VolFxProc           _owner;
+            public VolFx           _owner;
             [SerializeField]
             internal  bool             _active = true;
             [SerializeField] [HideInInspector]
@@ -212,7 +214,7 @@ namespace VolFx
         
         public class PassExecution : ScriptableRenderPass
         {
-            public   VolFxProc          _owner;
+            public   VolFx          _owner;
             internal RenderTargetFlip   _renderTarget;
             private  Pass[]             _passes;
             internal VolumeStack        _stack;
@@ -229,16 +231,17 @@ namespace VolFx
                 
                 _renderTarget = new RenderTargetFlip(nameof(_renderTarget));
                
+                var mask   = _owner._source._maskOverride.Enabled ? _owner._source._maskOverride.value : (_owner._mask.Enabled ? _owner._mask.Value : int.MaxValue); 
                 _output    = new RenderTarget().Allocate(_owner._source._source == SourceOptions.Source.LayerMask && _owner._source._output == SourceOptions.MaskOutput.Texture ? _owner._source._outputTex : "rt_out");
-                _rlp       = new RendererListParams(new CullingResults(), new DrawingSettings(), new FilteringSettings(RenderQueueRange.all, _owner._source._render.value));
+                _rlp       = new RendererListParams(new CullingResults(), new DrawingSettings(), new FilteringSettings(RenderQueueRange.all, mask));
                 
                 _profiler  = new ProfilingSampler(_owner.name);
             }
 
             public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
             {
-                if (_owner._volumeMask.Enabled && _stack != null)
-                    VolumeManager.instance.Update(_stack, null, _owner._volumeMask.Value);
+                if (_owner._mask.Enabled && _stack != null)
+                    VolumeManager.instance.Update(_stack, null, _owner._mask.Value);
             
                 // command buffer and validation
                 var cmd = CommandBufferPool.Get(_owner.name);
@@ -481,7 +484,7 @@ namespace VolFx
             if (disposing == false)
                 return;
             
-            if (_volumeMask.Enabled && _execution != null && _execution._stack != null)
+            if (_mask.Enabled && _execution != null && _execution._stack != null)
                  VolumeManager.instance.DestroyStack(_execution._stack);
         }
     }

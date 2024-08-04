@@ -8,7 +8,7 @@ using Buffer = VolFx.Tools.Buffer;
 namespace VolFx
 {
     [ShaderName("Hidden/VolFx/Mask")]
-    public class MaskPass : VolFxProc.Pass
+    public class MaskPass : VolFx.Pass
     {
         private static readonly int s_MaskTex   = Shader.PropertyToID("_MaskTex");
         private static readonly int s_SourceTex = Shader.PropertyToID("_SourceTex");
