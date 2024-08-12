@@ -338,7 +338,7 @@ namespace VolFx
                         case SourceOptions.Source.Camera:
                             return _getCameraOutput(ref renderingData);
                         case SourceOptions.Source.GlobalTex:
-                            return RTHandles.Alloc(_owner._source._sourceTex);
+                            return RTHandles.Alloc(_owner._source._sourceTex, name: _owner._source._sourceTex);
                         case SourceOptions.Source.RenderTex:
                             return RTHandles.Alloc(_owner._source._renderTex);
                         case SourceOptions.Source.LayerMask:
