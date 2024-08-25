@@ -10,7 +10,7 @@ designed for visual effects creation ✨
 
 Tested with 2022.2, 2023.2 Web (2021 not supported)
 
-* extended version on the [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
+* this is a non-commercial version that can be used for familiarisation, game jams or to determine whether you need it in your project, for commercial use consider purchasing the extended version on the [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
 * visual effect can be controlled via timeline using [ScreenFx](https://assetstore.unity.com/packages/tools/camera/270814)
 * can use effects from [PostArt](https://github.com/NullTale/PixelationFx) project as render passes
 
