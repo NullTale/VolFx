@@ -6,7 +6,7 @@ License for Non-Commercial use </br>
 • a more detailed description is provided below.</br>
 
 • this product cannot be used in any commercial projects or activities with monetization purposes. </br>
-• you may not sell, publish, or distribute the source code or any modifications of this product. </br>
+• you may not sell, publish, or distribute the source code or any modifications of this product as your own. </br>
 • the source code of this product cannot be used to create other tools, releases, be ported to other engines, or included in any commercial product or package. </br>
 
 • you are free to use this product in any non-commercial projects, such as jam games, studies, free applications, and others. </br>
