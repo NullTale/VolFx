@@ -9,7 +9,7 @@ designed for visual effects creation ✧
 
 Tested with 2022.2, 2023.2 Web (2021 not supported) (Unity 6 RenderGraph implemented in asset store version)
 
-* version posted for trial purposes, is no longer supported and cannot be used in commercial or eny othe activities read the license official release on [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
+* version posted for trial purposes, is no longer supported and cannot be used in commercial purposes, read the license, official release on [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
 * framework is only a part of the overall effects system its applicability is realised through the [ScreenFx](https://assetstore.unity.com/packages/tools/camera/270814)
 * the effects are loaded into the system separately and stored in it as render passees [PostArt](https://github.com/NullTale/PixelationFx)
 
