@@ -1,18 +1,17 @@
 # VolFx
-[![Twitter](https://img.shields.io/badge/Twitter-Twitter?logo=X&color=red)](https://twitter.com/NullTale)
+[![Twitter](https://img.shields.io/badge/Twitter-Twitter?logo=X&color=red)](https://x.com/NullTale)
 [![Discord](https://img.shields.io/badge/Discord-Discord?logo=discord&color=white)](https://discord.gg/CkdQvtA5un)
-[![Boosty](https://img.shields.io/badge/Support-Boosty?logo=boosty&color=white)](https://boosty.to/nulltale/donate)
 [![Asset Store](https://img.shields.io/badge/Asset%20Store-asd?logo=Unity&color=red)](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
 [![Forum](https://img.shields.io/badge/Forum-asd?logo=ChatBot&color=blue)](https://forum.unity.com/threads/1542860)
 
-VolFx is selective post-processing for Unity Urp<br>
-designed for visual effects creation ✨
+VolFx Modular Vfx Post-Processing with selective applivation for Unity Urp<br>
+designed for visual effects creation ✧
 
-Tested with 2022.2, 2023.2 Web (2021 not supported)
+Tested with 2022.2, 2023.2 Web (2021 not supported) (Unity 6 RenderGraph implemented in asset store version)
 
-* this is a non-commercial version that can be used for familiarisation, game jams or to determine whether you need it in your project, for commercial use consider purchasing the extended version on the [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
-* visual effect can be controlled via timeline using [ScreenFx](https://assetstore.unity.com/packages/tools/camera/270814)
-* can use effects from [PostArt](https://github.com/NullTale/PixelationFx) project as render passes
+* version posted for trial purposes, is no longer supported and cannot be used in commercial or eny othe activities read the license official release on [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
+* framework is only a part of the overall effects system its applicability is realised through the [ScreenFx](https://assetstore.unity.com/packages/tools/camera/270814)
+* the effects are loaded into the system separately and stored in it as render passees [PostArt](https://github.com/NullTale/PixelationFx)
 
 ## Features
 * Custom passes - expandable, has minimal set of custom effects and generic blit feature
