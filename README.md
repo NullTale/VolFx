@@ -1,7 +1,9 @@
 # VolFx
+Dev by NullTale - author's games, materials, graphics <br>
+[![Itch](https://img.shields.io/badge/Itch-Itch?logo=Itch.io&color=white)](https://nulltale.itch.io)
 [![Twitter](https://img.shields.io/badge/Twitter-Twitter?logo=X&color=red)](https://x.com/NullTale)
 [![Discord](https://img.shields.io/badge/Discord-Discord?logo=discord&color=white)](https://discord.gg/CkdQvtA5un)
-[![Asset Store](https://img.shields.io/badge/Asset%20Store-asd?logo=Unity&color=red)](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
+[![Asset Store](https://img.shields.io/badge/Asset%20Store-asd?logo=Unity&color=blue)](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
 [![Forum](https://img.shields.io/badge/Forum-asd?logo=ChatBot&color=blue)](https://forum.unity.com/threads/1542860)
 
 FOR NON COMMERCIAL USE ONLY - version is no longer supported and cannot be used in commercial purposes<br>
