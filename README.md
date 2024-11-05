@@ -4,13 +4,14 @@
 [![Asset Store](https://img.shields.io/badge/Asset%20Store-asd?logo=Unity&color=red)](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
 [![Forum](https://img.shields.io/badge/Forum-asd?logo=ChatBot&color=blue)](https://forum.unity.com/threads/1542860)
 
+FOR NON COMMERCIAL USE ONLY - version is no longer supported and cannot be used in commercial purposes<br>
+read the license, official release only on the [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
+
 VolFx Modular Vfx Post-Processing with selective applivation for Unity Urp<br>
 designed for visual effects creation ✧
 
 Tested with 2022.2, 2023.2 Web (2021 not supported) (Unity 6 RenderGraph implemented in asset store version)
 
-NOT FOR COMMERCIAL USE version posted for trial purposes, is no longer supported and cannot be used in commercial purposes<br>
-read the license, official release on [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
 
 * framework is only a part of the overall effects system its applicability is realised through the [ScreenFx](https://assetstore.unity.com/packages/tools/camera/270814)
 * the effects are loaded into the system separately and stored in it as render passees [PostArt](https://github.com/NullTale/PixelationFx)
