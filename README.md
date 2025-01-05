@@ -7,7 +7,7 @@ Dev by NullTale<br>
 [![Forum](https://img.shields.io/badge/Forum-asd?logo=ChatBot&color=blue)](https://forum.unity.com/threads/1542860)
 
 FOR NON COMMERCIAL USE ONLY - version is no longer supported and cannot be used in commercial purposes<br>
-read the license, official release only on the [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/volfx-270928)
+read the license, official release only on the [AssetStore](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/300643)
 
 VolFx Modular Vfx Post-Processing with selective applivation for Unity Urp<br>
 designed for visual effects creation ✧
@@ -46,7 +46,7 @@ Volume control allows to tweack texture at runtime to achive desiared light visu
 ![_Light](https://github.com/NullTale/VolFx/assets/1497430/2bed6140-1b82-41a6-8b9d-adc991334e3c)<br>
 
 
-#### Extended [AssetStore](https://assetstore.unity.com/packages/tools/particles-effects/270928) store version
+#### Extended [AssetStore](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/volfx-vfx-toolkit-300643) store version
 
 Additional custom passets and option to support the project
 
