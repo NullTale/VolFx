@@ -302,7 +302,7 @@ namespace VolFx
         public static void CopyrightInfo()
         {
             var type = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name.Replace(".Editor", "");
-            var link = "https://assetstore.unity.com/packages/tools/particles-effects/270928";
+            var link = "https://assetstore.unity.com/packages/tools/particles-effects/300643";
             
             var ssc = SessionState.GetInt($"CopyrightInfo_{type}_33", UnityEngine.Random.Range(3, 7 + 1));
             SessionState.SetInt($"CopyrightInfo_{type}_33", ssc + 1);
