@@ -1,8 +1,6 @@
 # VolFx
 Dev by NullTale<br>
 [![Itch](https://img.shields.io/badge/Web-Itch?logo=Itch.io&color=white)](https://nulltale.itch.io)
-[![Twitter](https://img.shields.io/badge/Twitter-Twitter?logo=X&color=red)](https://x.com/NullTale)
-[![Tg](https://img.shields.io/badge/Tg-Telegram?logo=telegram&color=white)](https://t.me/nulltalescape)<br>
 [![Asset Store](https://img.shields.io/badge/Asset%20Store-asd?logo=Unity&color=blue)](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/300643)
 
 FOR NON COMMERCIAL USE ONLY - version is no longer supported and cannot be used in commercial purposes<br>
